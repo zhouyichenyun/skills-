@@ -2,6 +2,22 @@
 
 这套技能同时提供通用 MP4 / SRT 和可继续编辑的时间线。这里的安装脚本只安装技能，不会安装剪映或达芬奇，也不会远程控制你的电脑。
 
+## 自动制作与续跑
+
+完整任务由 ai-production-orchestrator 作为入口。给Codex主题/故事或原片后，它建立项目、选择路由并持续消费创作/生成/审核动作；用户不必逐项点技能或手写项目JSON。
+
+已有项目可在本机启动/续跑：
+
+    .\windows\run-production.ps1 -Project "D:\Productions\my-project"
+
+本地阶段自动运行；退出10表示宿主代理还有动作，需要由Codex继续当前项目。单独PowerShell不持有宿主MCP调用能力，也不表示已部署24小时无人值守生成服务。待办、失败、预算与历史保存在项目目录，不重复提交已有生成任务。
+
+只读环境检查：
+
+    python skills/ai-production-orchestrator/scripts/preflight.py --skills-root skills --out capability-check.json
+
+需要实际探测本机Resolve接口时加 --probe-resolve；默认只检查配置，不能把模块存在当连接成功。探测不创建或保存工程。
+
 ## 本机安装
 
 下载或克隆本仓库，在仓库根目录运行 PowerShell：

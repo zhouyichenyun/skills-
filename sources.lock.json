@@ -4,6 +4,121 @@
   "target_environment": "Windows: Jianying/CapCut and DaVinci Resolve; offline story canvas by default",
   "skills": [
     {
+      "name": "ai-production-orchestrator",
+      "local_version": "1.0.0",
+      "origin": "original project implementation",
+      "license": "MIT",
+      "verification": "VERIFICATION.md",
+      "configuration_generation_calls": 0,
+      "files": [
+        {
+          "path": "skills/ai-production-orchestrator/LICENSE",
+          "bytes": 1083,
+          "sha256": "f496e36497764a6a7df6b9137deab3ed4e8262a7d5632b4403817f714dc916ce"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/PROVENANCE.md",
+          "bytes": 359,
+          "sha256": "c955a3612d10fd1eb8cdddda048944767924a15f57bf69f903aa8e6f1aa0b027"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/README.md",
+          "bytes": 615,
+          "sha256": "42bf170243837108b8a4c3fbe9c6fd861ec1cd7eb380889830eb301c4eff3307"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/SKILL.md",
+          "bytes": 7587,
+          "sha256": "622e45dc4c078d7d607959cc2bb9e56502f68f5851ea2b4bb75844ec872b3eb2"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/agents/openai.yaml",
+          "bytes": 376,
+          "sha256": "18a31d48284bca082eb097facd3e65d23fe7d1ef8ccff3e130ee567722ce4bc6"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/examples/README.md",
+          "bytes": 806,
+          "sha256": "06e15899263e8c244accd7785553f32f27dffb145489dfbab0342d279c3795b6"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/examples/action-results.md",
+          "bytes": 2702,
+          "sha256": "b80234a7639b4780d0e725e6d9087a8902aa0bcae6fad78bc46aefd62596c50e"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/references/acceptance-and-repair.md",
+          "bytes": 2080,
+          "sha256": "d66302efb4b7d4deeecd40afe40047af5adca2f557383f4ebb2102f8857df410"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/references/assets-and-generation.md",
+          "bytes": 1900,
+          "sha256": "51e4d9b800edf235b03c36440a5c4515179c7e3cb8817995dae44720e1e80e06"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/references/capabilities.md",
+          "bytes": 1417,
+          "sha256": "c5a327b71bb39cafc064027e2dba83293d46dfa8610835e1c146fe2f261faf45"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/references/execution-contract.md",
+          "bytes": 2519,
+          "sha256": "dac15e8f7e1565b0a1347a496cfe05900ae262553b7356c5f1c090965f7fcda8"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/references/production-routes.md",
+          "bytes": 2874,
+          "sha256": "67d51f46e2c8b2837d87038612a8d89e736ea7064e998a1c4f7569b1d30b19ae"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/scripts/adapter_selftest.py",
+          "bytes": 19636,
+          "sha256": "33080c02c32b2a9e15be6bd7eef0884fbcea47fed8adaffd3e028e7f89222b2c"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/scripts/asset_registry.py",
+          "bytes": 33178,
+          "sha256": "ed4c0b0f1fb56512f3a87d759c9a17a1421d2995d77d487cda3becbb39e2b191"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/scripts/compiler.py",
+          "bytes": 28337,
+          "sha256": "5f018013130dde167960295264154cd7ce5419fbf3507891ccacd01cfda1149b"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/scripts/demo.py",
+          "bytes": 6279,
+          "sha256": "e86fbfaf7f970b82fd339c118ef4af7d81b67112299af098a374cf10eec59048"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/scripts/engine_selftest.py",
+          "bytes": 22555,
+          "sha256": "832dcdd61200167de7e62f3c93e06c7efceee0416f178a9178f72eec3f156c1b"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/scripts/orchestrator.py",
+          "bytes": 60548,
+          "sha256": "824778698486481daab4023fb68a95d98286d1e22ef8af02cb6b56d1f820d734"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/scripts/pipeline_adapter.py",
+          "bytes": 48433,
+          "sha256": "7ae1740af54ee1e106e872194566de9a8b33cfcb8225126ff89b08fefbbd690a"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/scripts/preflight.py",
+          "bytes": 13852,
+          "sha256": "2f7f7fd5a4f58cfc37f7bb681d4bbea909fc071c6d0c7004fa23f3592ae6d329"
+        },
+        {
+          "path": "skills/ai-production-orchestrator/scripts/registry_selftest.py",
+          "bytes": 17380,
+          "sha256": "b683b5d0fb4ea84a42848141e250d11a39f007954463487b4bb9ef8932211781"
+        }
+      ]
+    },
+    {
       "name": "audio-production-director",
       "local_version": "1.0.0",
       "origin": "original project implementation",
@@ -792,7 +907,7 @@
     },
     {
       "name": "talking-head-writer",
-      "local_version": "1.0.0",
+      "local_version": "1.1.0",
       "origin": "original project implementation",
       "verification": "VERIFICATION.md",
       "files": [
@@ -818,8 +933,8 @@
         },
         {
           "path": "skills/talking-head-writer/references/handoff-contract.md",
-          "bytes": 3178,
-          "sha256": "6468930d990164c0f10b73372038f10bc32451de50090954fb9ee834af829227"
+          "bytes": 3604,
+          "sha256": "1904776727a5bda8867ab681cbc6912d93b707b9217a7b816b5b95a5cfaeb7aa"
         },
         {
           "path": "skills/talking-head-writer/references/script-structure.md",
@@ -991,5 +1106,6 @@
         ]
       }
     }
-  ]
+  ],
+  "orchestration_entrypoint": "ai-production-orchestrator"
 }

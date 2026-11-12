@@ -16,6 +16,7 @@ SKILLS = (
     "video-shots", "cinematic-video-prompt-engineer", "talking-head-writer",
     "cinematic-director", "talking-head-auto-editor", "video-review-autofix",
     "audio-production-director", "story-canvas-producer",
+    "ai-production-orchestrator",
 )
 
 def verify_source(name: str) -> Path:

@@ -1,0 +1,6 @@
+interface:
+  display_name: "AI制片总调度"
+  short_description: "从主题或素材自动组织八技能，管理状态、预算、续跑、返工与交付"
+  default_prompt: "使用 $ai-production-orchestrator 接管当前制作目标，创建项目并持续运行到交付或明确的外部阻塞，自动消费动作队列。"
+policy:
+  allow_implicit_invocation: true
