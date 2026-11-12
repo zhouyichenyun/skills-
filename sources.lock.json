@@ -1,6 +1,7 @@
 {
   "schema_version": 1,
   "configured_on": "2026-11-12",
+  "target_environment": "Windows: Jianying/CapCut and DaVinci Resolve",
   "skills": [
     {
       "name": "video-shots",
@@ -245,6 +246,600 @@
         "section_list_smoke": "passed",
         "section_read_smoke": "passed"
       }
+    },
+    {
+      "name": "talking-head-writer",
+      "local_version": "1.0.0",
+      "origin": "original project implementation",
+      "verification": "VERIFICATION.md",
+      "files": [
+        {
+          "path": "skills/talking-head-writer/SKILL.md",
+          "bytes": 6893,
+          "sha256": "8c2fca0b900e7220dca2331d0c706730af9702ab199c92da463706ee8a3bdbf4"
+        },
+        {
+          "path": "skills/talking-head-writer/agents/openai.yaml",
+          "bytes": 430,
+          "sha256": "f3a45c993b934e14c209c3355a02afffd0bb742960916ae5d2559341aad3c5fc"
+        },
+        {
+          "path": "skills/talking-head-writer/examples/short-talking-head.md",
+          "bytes": 4348,
+          "sha256": "7ea5c67c06dff106fc54c0d2b0120aa35da7ab6be165f0f9fdfd78e47fe1bbe1"
+        },
+        {
+          "path": "skills/talking-head-writer/references/broll-brief.md",
+          "bytes": 3266,
+          "sha256": "50ed5691bdf15d44b40d02f096b07cf2b9b5e339dcccff7312a84fd9c65a3474"
+        },
+        {
+          "path": "skills/talking-head-writer/references/handoff-contract.md",
+          "bytes": 3178,
+          "sha256": "6468930d990164c0f10b73372038f10bc32451de50090954fb9ee834af829227"
+        },
+        {
+          "path": "skills/talking-head-writer/references/script-structure.md",
+          "bytes": 2496,
+          "sha256": "4a59693759c6db5028d1f39828b15532ac037a5300618962e233670fac0e9afa"
+        },
+        {
+          "path": "skills/talking-head-writer/references/transcript-editing.md",
+          "bytes": 3054,
+          "sha256": "e960e9759ea988b87ab1ccbc6459c92a3f91007f19653f7d3b3d267fe3ee3ec1"
+        }
+      ]
+    },
+    {
+      "name": "cinematic-director",
+      "local_version": "1.0.0",
+      "origin": "pinned MIT upstream with local integration additions",
+      "verification": "VERIFICATION.md",
+      "files": [
+        {
+          "path": "skills/cinematic-director/CHANGELOG.md",
+          "bytes": 22192,
+          "sha256": "ebcbaf9bb45908127b0c3bd71873b90bc42e356293b2b32edd72b79ebc431401",
+          "upstream_path": "CHANGELOG.md",
+          "upstream_git_blob_sha": "8b1854dcb19110c4dbb069e24ba2ee771ab40b9b",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/CONTRIBUTING.md",
+          "bytes": 23099,
+          "sha256": "b457e8094b71f8619685073032b38dcb342a5df4d3439f1f20440b9f71a9d1ad",
+          "upstream_path": "CONTRIBUTING.md",
+          "upstream_git_blob_sha": "cc18ab06bea12f8a2af188cff5d7852dfd39ef52",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/LICENSE",
+          "bytes": 1069,
+          "sha256": "df731ea2e1ffd3b8890ad246da3df96ceba3301c16fb4970c16811df4c728b56",
+          "upstream_path": "LICENSE",
+          "upstream_git_blob_sha": "7bc31676d9571c9dd6f1a7f9ef43a7123669a6dd",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/README.md",
+          "bytes": 37033,
+          "sha256": "de61800434c2ff91cb5aff1b86d35d542b70d3b64716ecb09c1fa8322b9c1fd9",
+          "upstream_path": "README.md",
+          "upstream_git_blob_sha": "8b6770440c2fb87421c212afc3ae3d014983cfc3",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/SKILL.md",
+          "bytes": 32781,
+          "sha256": "5e00c58a39a30e67f25ba35a88faaad1b9c2415a4ab376d66538219ea0ff6b4e",
+          "upstream_path": "SKILL.md",
+          "upstream_git_blob_sha": "84991f293d9a0fafb99da596202959c2342c39af",
+          "modified": true
+        },
+        {
+          "path": "skills/cinematic-director/agents/openai.yaml",
+          "bytes": 333,
+          "sha256": "7d8b40c1b5e5072d8979ff36623d4266b86d66b9f65b84e71742cd2b702b0798"
+        },
+        {
+          "path": "skills/cinematic-director/assets/beat-sheet-template.md",
+          "bytes": 10653,
+          "sha256": "e53e846e9f43cdc80cf261bde4978001628d6383a6d4bd702762f88131e04bda",
+          "upstream_path": "assets/beat-sheet-template.md",
+          "upstream_git_blob_sha": "d4806bbdd47a1dfcdb4b546d2ec764453dad509a",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/assets/director-book-template.md",
+          "bytes": 16714,
+          "sha256": "d6f0901207a822220fe87a7ca2feeea0ddeaf142a168a03704456e69b0ad68b0",
+          "upstream_path": "assets/director-book-template.md",
+          "upstream_git_blob_sha": "37c3356313de053f96e0146a321b5dd8eb567aa3",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/assets/edit-timeline-template.md",
+          "bytes": 10018,
+          "sha256": "b6a6ad673094a419ada6afb9d8e613b4d2c8538cface5cb17031bc7b408fc5ee",
+          "upstream_path": "assets/edit-timeline-template.md",
+          "upstream_git_blob_sha": "5354622103f9e68194cbf40f7ef41e678273fed5",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/assets/keyframe-prompt-template.md",
+          "bytes": 23395,
+          "sha256": "9d9f4463e87551c29268e6179890291ce90bbd1adb6cc2c48e62116df90fa527",
+          "upstream_path": "assets/keyframe-prompt-template.md",
+          "upstream_git_blob_sha": "6ae1f612434449bd09ef520a5553bc996f5778a9",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/assets/qc-checklist.md",
+          "bytes": 10739,
+          "sha256": "ca10d9bd57a253d555b18a5ca4f1e29e7ff944434adb1e74b45fa4dffe2f4a11",
+          "upstream_path": "assets/qc-checklist.md",
+          "upstream_git_blob_sha": "ac188cf9a0cc379c68a137e95aeb987d09533cd7",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/assets/shot-plan-template.md",
+          "bytes": 17080,
+          "sha256": "74aad412013e13ff0b3ff05880f55f74aadf009a080188a7adc91b4b3ff87688",
+          "upstream_path": "assets/shot-plan-template.md",
+          "upstream_git_blob_sha": "ab3e5ed3d0ee564807e41d8bb55344cbe8a8914a",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/assets/sound-plan-template.md",
+          "bytes": 13021,
+          "sha256": "f8a4064cc2817aaba3e49027e6c93552693b773ffce2ab4058223f8745cc42d6",
+          "upstream_path": "assets/sound-plan-template.md",
+          "upstream_git_blob_sha": "0a4a59fd35eaf57c6992118cc927a4751e482c82",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/assets/video-prompt-template.md",
+          "bytes": 19568,
+          "sha256": "0f70494e620e9ad72355799421ff53b02b8e347eb1fb10a80a008bba9bb4473b",
+          "upstream_path": "assets/video-prompt-template.md",
+          "upstream_git_blob_sha": "b75af0a9722f894253167742a300fa2e1e73b61e",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/evals/evals.json",
+          "bytes": 77862,
+          "sha256": "df30ec8c85fdafff8e66e8025d42e6ec25892c95276738b4763dfa991f914562",
+          "upstream_path": "evals/evals.json",
+          "upstream_git_blob_sha": "8d364c138983c446825fd2b6cb066cd5ee1eee81",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/evals/run.md",
+          "bytes": 4926,
+          "sha256": "27f46fdbefab8eb7b21991d6d8ef7d5afa6cac7a5b980693276d7e8462c7ca1a",
+          "upstream_path": "evals/run.md",
+          "upstream_git_blob_sha": "b462553033ceeb09bf31ff25e7c1bf43c4116c0c",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/ai-video-tool-adapters.md",
+          "bytes": 58152,
+          "sha256": "4fec32bd0dbe95a87af84f6319c428af1f58f0e266e42f907e2dfc51edbe7334",
+          "upstream_path": "references/ai-video-tool-adapters.md",
+          "upstream_git_blob_sha": "57af84133b36202cc20c1cce7305d0e2428550c9",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/blocking-and-staging.md",
+          "bytes": 39568,
+          "sha256": "16203dd654d61459df6eabb7754d5b450a17774ad18484f27a1c05e73d392402",
+          "upstream_path": "references/blocking-and-staging.md",
+          "upstream_git_blob_sha": "3f08d41fc12b12b1f3459848e8437643e46662f1",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/cinematic-language.md",
+          "bytes": 45560,
+          "sha256": "2e899733fdefb12d316faeeaed1a5dc466dea55ef3818b28e7cec13d7a501933",
+          "upstream_path": "references/cinematic-language.md",
+          "upstream_git_blob_sha": "1aefa4171a1caa073e3e08773bd206af15ef464c",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/continuity-bible.md",
+          "bytes": 37392,
+          "sha256": "92aad85488aee0fcad6d432ce29f66286d66245bb2a17499a325afb356c74826",
+          "upstream_path": "references/continuity-bible.md",
+          "upstream_git_blob_sha": "14657fb6052049154e0b0a6811a1ce305ef5992d",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/01_spielberg.md",
+          "bytes": 13606,
+          "sha256": "c1d8db44ae145e3a5bc1791967afb2d02a9f838ae5691dbbe47d006b754d7783",
+          "upstream_path": "references/director_styles/01_spielberg.md",
+          "upstream_git_blob_sha": "7f463a1bd09b788e09481ab0969d9f87fb735127",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/02_hitchcock.md",
+          "bytes": 15161,
+          "sha256": "fcd7952d7c1970ed9b477d1d8ac3c03b3c3c956d4fc057dfb2a061a8a180b4a8",
+          "upstream_path": "references/director_styles/02_hitchcock.md",
+          "upstream_git_blob_sha": "4be4fb12f1d8b276cc766226e7c41bcd75a46c8f",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/03_kubrick.md",
+          "bytes": 15647,
+          "sha256": "fb63f95a6e0467cac92c7a876bf5d371d844ac60bee160280cbf94f895f32117",
+          "upstream_path": "references/director_styles/03_kubrick.md",
+          "upstream_git_blob_sha": "2793588cb0d05767daa2127a23df23348dcf74ba",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/04_kurosawa.md",
+          "bytes": 15743,
+          "sha256": "492e644362f4942616f28ae51c330a82c0116094a20a0bcf7c54378009a8e2ac",
+          "upstream_path": "references/director_styles/04_kurosawa.md",
+          "upstream_git_blob_sha": "6a41b382a13332f4882da926ffb8b85a862b3f2a",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/05_scorsese.md",
+          "bytes": 15964,
+          "sha256": "cf1449787769cd918b6b8438a66a61979211005039ffba24c48ec4ab1969c942",
+          "upstream_path": "references/director_styles/05_scorsese.md",
+          "upstream_git_blob_sha": "0fac3120937acc6dd60b46ed8db14847a7126787",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/06_fellini.md",
+          "bytes": 16271,
+          "sha256": "6f6fe403c2da97e8bda4c6c2429f5f9418e9f04da74d91f201df6b5b3fd74211",
+          "upstream_path": "references/director_styles/06_fellini.md",
+          "upstream_git_blob_sha": "c082fc16e9547f9009e511089bdc66f13e7e9e56",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/07_bergman.md",
+          "bytes": 16530,
+          "sha256": "e277116732258c3557eba5c040ade8b71646fa5c23b704355017f4688bb6fd00",
+          "upstream_path": "references/director_styles/07_bergman.md",
+          "upstream_git_blob_sha": "1659b0de55a99564db6c636acf07b8fc5942b245",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/08_tarkovsky.md",
+          "bytes": 15645,
+          "sha256": "fe7e26e409ae727a859f07374d8a5f910e6a8a737695b0a6605db8f24bd6d77d",
+          "upstream_path": "references/director_styles/08_tarkovsky.md",
+          "upstream_git_blob_sha": "614968aff8a248a93951c301c0b636a8729ccf20",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/09_wong_kar_wai.md",
+          "bytes": 17060,
+          "sha256": "c60e33b3d99cc1e52dc02d57e40f61fb008c5647ac2eab30a51c45544711c57b",
+          "upstream_path": "references/director_styles/09_wong_kar_wai.md",
+          "upstream_git_blob_sha": "9fd99535dcd649471868614b6879542a58f2a349",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/10_nolan.md",
+          "bytes": 15623,
+          "sha256": "ef506940f2447567427c819725351f6bafc91e51c935c3bbdc6cacdf94f5a6dd",
+          "upstream_path": "references/director_styles/10_nolan.md",
+          "upstream_git_blob_sha": "69868903294185df8429b0eb6f4aaf7dca811edc",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/11_villeneuve.md",
+          "bytes": 17386,
+          "sha256": "8f825927d68091767cd901e293484bfe50646b778c1cac8a8f77cccca198ca9c",
+          "upstream_path": "references/director_styles/11_villeneuve.md",
+          "upstream_git_blob_sha": "4e9fd751dd0d0ad879c4b416a0f6787dd831cf01",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/12_fincher.md",
+          "bytes": 17153,
+          "sha256": "4cf9cce055dd14088ba7cd01446b389ac62e327a7aea7dac2d345939526061b5",
+          "upstream_path": "references/director_styles/12_fincher.md",
+          "upstream_git_blob_sha": "fa3ce23e4b8d4749f7eaded5918580bd9fe870aa",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/13_refn.md",
+          "bytes": 16325,
+          "sha256": "05dc74f79684cc9f1bb4ec760d69ba4498e1fcca904fa504f58acde96442de74",
+          "upstream_path": "references/director_styles/13_refn.md",
+          "upstream_git_blob_sha": "283bddcb1ce022dc3cf133196983f0d63e976078",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/14_bi_gan.md",
+          "bytes": 17808,
+          "sha256": "47ca34530e8573fbe49818c0dcaf8553ce92be37279c03ae388e92e6faf6a82a",
+          "upstream_path": "references/director_styles/14_bi_gan.md",
+          "upstream_git_blob_sha": "cadf034d98bc9d0574466c323509aab6ccdd28fb",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/15_zhang_yimou.md",
+          "bytes": 20272,
+          "sha256": "9bc951babbf3e51f8c2f0e129216578378536d17fac42663596a8397b28505c3",
+          "upstream_path": "references/director_styles/15_zhang_yimou.md",
+          "upstream_git_blob_sha": "3ccd8a47dce3bf94e18b2e2e781b6f588ada50ef",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/16_hou_hsiao_hsien.md",
+          "bytes": 20758,
+          "sha256": "c336fab4d549603beaf47a01ec0dbdcb52be99837d774425e50ec0350691f8b1",
+          "upstream_path": "references/director_styles/16_hou_hsiao_hsien.md",
+          "upstream_git_blob_sha": "6d1d7b57b44b7aa877dce3600322cdf0e83b78b7",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/17_park_chan_wook.md",
+          "bytes": 21524,
+          "sha256": "8ada598768c187ea8b057a1b5e1107045b567811487eee73f64199507c1efb7b",
+          "upstream_path": "references/director_styles/17_park_chan_wook.md",
+          "upstream_git_blob_sha": "8fdb0ea3354bbc496f41be7d91d0cc90890ea0ec",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/18_malick.md",
+          "bytes": 18726,
+          "sha256": "ee5c6786c58385772e99eb003430bd24eafea83db19023619d63e47954af1f95",
+          "upstream_path": "references/director_styles/18_malick.md",
+          "upstream_git_blob_sha": "d50795ba17efe8c38fc80c28d2a0836d4a260c76",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/19_michael_mann.md",
+          "bytes": 21041,
+          "sha256": "b34fd4c8b0ca4833818f4d3f6471777341c6b23481b6efc6f69b4cfb0554cf79",
+          "upstream_path": "references/director_styles/19_michael_mann.md",
+          "upstream_git_blob_sha": "c53833cc0d57a899810ffb960761c239fb411805",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/20_coen_brothers.md",
+          "bytes": 21290,
+          "sha256": "4809d2861e696a54df4b28f3abe442311dc722b0a67f2f6e99db19dd385d5a68",
+          "upstream_path": "references/director_styles/20_coen_brothers.md",
+          "upstream_git_blob_sha": "a6ab491fca7061ff79f6563d73350a89706509ee",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/README.md",
+          "bytes": 9582,
+          "sha256": "fcd5fc6193e0b86765be168af4cb43ee30bd1cb805ceb5bcc27241dbcd2d1798",
+          "upstream_path": "references/director_styles/README.md",
+          "upstream_git_blob_sha": "58c90d8ce5280e263a2f5f4f271d4ba64b3fb0e7",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/director_styles/example_comparisons.md",
+          "bytes": 13036,
+          "sha256": "d13bd746f88418fdf259b25115b6cab4d259ba31ef6d57f251fdeeaddebc9504",
+          "upstream_path": "references/director_styles/example_comparisons.md",
+          "upstream_git_blob_sha": "db14296a25880c0dcdb5f56fba2d8ed644b35764",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/editing-and-assembly.md",
+          "bytes": 32110,
+          "sha256": "8256bb843e8d45ba66aba927edef30cd586a0a32030e4a4639d26be156e850de",
+          "upstream_path": "references/editing-and-assembly.md",
+          "upstream_git_blob_sha": "e5a9bbede05325caad26c2556aa8804bc5ffb580",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/failure-modes.md",
+          "bytes": 58954,
+          "sha256": "9a374e78ac8257ed8c91d7c247ebc2f1d27a3484b0c1486fee7d77e554fb9be7",
+          "upstream_path": "references/failure-modes.md",
+          "upstream_git_blob_sha": "383b23d00e3ab5c2e82df629e25a5f162ef6c16d",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/genre-playbooks.md",
+          "bytes": 58886,
+          "sha256": "5713431b20dcd6c4804d086385106ecce9ef483210287dfdceacc351077d33e1",
+          "upstream_path": "references/genre-playbooks.md",
+          "upstream_git_blob_sha": "07a20962ac61d2a73e36ddf1499245217544e8db",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/image-model-adapters.md",
+          "bytes": 36287,
+          "sha256": "307f429a66ce7ae2c4f4e7d6893e59b8017549dd12d944c2a1aefd605b2f543a",
+          "upstream_path": "references/image-model-adapters.md",
+          "upstream_git_blob_sha": "a9baa4e1ab582bed9986548159c4105d6e6ce180",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/lighting-and-color.md",
+          "bytes": 40978,
+          "sha256": "fb34edea030bbb29b047ff7e489968dded8978f1a3acb768ede230a1c106792b",
+          "upstream_path": "references/lighting-and-color.md",
+          "upstream_git_blob_sha": "8a51756bde6e0335d0ac3f6898161819147f16b8",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/product-and-macro.md",
+          "bytes": 23452,
+          "sha256": "c6b791fe96db082517c8e3d639269228cee3ae68d55ddababbb7b09d967ca350",
+          "upstream_path": "references/product-and-macro.md",
+          "upstream_git_blob_sha": "f321c4efcc12c4e0c23aab1c51fe4adfa3d9cb2e",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/production-workflow.md",
+          "bytes": 30657,
+          "sha256": "3f5e431b23931ae636d6637c92b63bc084407a1b4a8b1625fb5e9c393bb97998",
+          "upstream_path": "references/production-workflow.md",
+          "upstream_git_blob_sha": "4040310e3da6df0f7dcd36d9b76c6592a71cd8b3",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/prompt-lexicon.md",
+          "bytes": 54272,
+          "sha256": "8e2172f9255dbc9ce51b7f54af9cb570283808a6ad4aa34fcf439c56c513138f",
+          "upstream_path": "references/prompt-lexicon.md",
+          "upstream_git_blob_sha": "9d5272d1bcbf45c657d7cc42a7b2d3eaf950cf9b",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/sound-and-dialogue.md",
+          "bytes": 30977,
+          "sha256": "fcc99cacf1bc35caf3dd5e9430a0f3c731b5b65868171cc488282559017d43de",
+          "upstream_path": "references/sound-and-dialogue.md",
+          "upstream_git_blob_sha": "043e6e7e8107d4bab8c49762673ca7783c3a1808",
+          "modified": false
+        },
+        {
+          "path": "skills/cinematic-director/references/windows-talking-head-handoff.md",
+          "bytes": 7928,
+          "sha256": "9d6c1f39e508d6b6f22b57a0a3169b9102048bd46bed33281e81608301a7db9b"
+        }
+      ],
+      "upstream_repository": "wuwangzhang1216/DirectorSKILL",
+      "upstream_commit": "c65ae0d14457053efb1e354c7e7f7e120d97fad1",
+      "license": "MIT",
+      "local_modifications": [
+        "SKILL.md: route to Windows talking-head handoff"
+      ],
+      "local_additions": [
+        "references/windows-talking-head-handoff.md",
+        "agents/openai.yaml"
+      ]
+    },
+    {
+      "name": "talking-head-auto-editor",
+      "local_version": "1.0.0",
+      "origin": "original project implementation",
+      "verification": "VERIFICATION.md",
+      "files": [
+        {
+          "path": "skills/talking-head-auto-editor/LICENSE",
+          "bytes": 1070,
+          "sha256": "0151e98aa3c53e7ba1fc1ff08d1aeccc2fe9a59c7a6b46b51168625a6733d3ac"
+        },
+        {
+          "path": "skills/talking-head-auto-editor/README.md",
+          "bytes": 1679,
+          "sha256": "20b6872e68c6b75b35404d87cc191e128ce08ea76e2c011d949ef49807c41367"
+        },
+        {
+          "path": "skills/talking-head-auto-editor/SKILL.md",
+          "bytes": 8872,
+          "sha256": "f6de735f762383bb456e101bc007ce8fd8a9a53a3009415a8e1d9d419aa64164"
+        },
+        {
+          "path": "skills/talking-head-auto-editor/agents/openai.yaml",
+          "bytes": 381,
+          "sha256": "36a1b2305a78e3fd39565768a043510d9002a7aba46b5acac684edbe67d9bd90"
+        },
+        {
+          "path": "skills/talking-head-auto-editor/examples/asset-plan.example.json",
+          "bytes": 601,
+          "sha256": "a41f65430db2e232ca837710ddd4d4c71c7a839e84c30cdb8418250fd3fa927f"
+        },
+        {
+          "path": "skills/talking-head-auto-editor/examples/job.example.json",
+          "bytes": 477,
+          "sha256": "cda09ae991b1ec1adbc09a25e639e5a1cbfb95ab512457c378315f30d03c6eda"
+        },
+        {
+          "path": "skills/talking-head-auto-editor/references/asset-selection.md",
+          "bytes": 2193,
+          "sha256": "fe315e2e8e77283767c6afe99d57086e3a1c87be364e8477cfe1af12043c71d6"
+        },
+        {
+          "path": "skills/talking-head-auto-editor/references/job-and-interchange.md",
+          "bytes": 2282,
+          "sha256": "4c0cb90355f4bd58abd752691fe3e698cb42a2ed373435046cdd8dc31cb269cb"
+        },
+        {
+          "path": "skills/talking-head-auto-editor/references/windows-setup.md",
+          "bytes": 2849,
+          "sha256": "94e80f3dd5e2677d7514c142dae38429dd4485e4b1c50ee4558e94a4b6c5912c"
+        },
+        {
+          "path": "skills/talking-head-auto-editor/requirements-optional.txt",
+          "bytes": 331,
+          "sha256": "716417e9f7f4d924c50a553ba5da52356a2be88753660230d022d309eec53b6a"
+        },
+        {
+          "path": "skills/talking-head-auto-editor/scripts/editor.py",
+          "bytes": 41397,
+          "sha256": "5a4aa146a93336215c27d10ac7f70fe12eae470f3afd6a8debb37bd63845fae9"
+        },
+        {
+          "path": "skills/talking-head-auto-editor/scripts/resolve_bridge.py",
+          "bytes": 5307,
+          "sha256": "6f712c132071ae650c4fcf0d01045034f01e380d13563ebd87adf29987abc3f1"
+        },
+        {
+          "path": "skills/talking-head-auto-editor/scripts/selftest.py",
+          "bytes": 9034,
+          "sha256": "fc897471eff281f752bde9d944fb8e8fcfabbf1b95df7aebc749d7f2243ba283"
+        }
+      ],
+      "license": "MIT"
+    },
+    {
+      "name": "video-review-autofix",
+      "local_version": "1.0.0",
+      "origin": "original project implementation",
+      "verification": "VERIFICATION.md",
+      "files": [
+        {
+          "path": "skills/video-review-autofix/LICENSE",
+          "bytes": 1086,
+          "sha256": "383b5b87af6112e5691df5e399770ee17481dc00a0267399f6fd8cf44775fe80"
+        },
+        {
+          "path": "skills/video-review-autofix/PROVENANCE.md",
+          "bytes": 738,
+          "sha256": "c1c03eeda95392d3217ac588c1c9667dd4fad222d57d1fb4461cd3bfc1c8cd4b"
+        },
+        {
+          "path": "skills/video-review-autofix/SKILL.md",
+          "bytes": 7935,
+          "sha256": "02bb9693ad9853d5d64ad139deec74866df8fdcce76a7020d770044f547a8002"
+        },
+        {
+          "path": "skills/video-review-autofix/agents/openai.yaml",
+          "bytes": 323,
+          "sha256": "c5241c76e3ad461c1e68ccc45fbac4d19ad515a2d7470f72fef5f18c3295e7a4"
+        },
+        {
+          "path": "skills/video-review-autofix/references/repair-handoff.md",
+          "bytes": 3053,
+          "sha256": "4da9e13920cf8c8317bb9f9a54b1714f4b54012b1840a5c1b3bc328600ee37a5"
+        },
+        {
+          "path": "skills/video-review-autofix/references/visual-review.md",
+          "bytes": 3271,
+          "sha256": "ae0419f6169c6827cdac1ce1dadeed7acba0afa88a2b02ede70b798be7495010"
+        },
+        {
+          "path": "skills/video-review-autofix/scripts/selftest.py",
+          "bytes": 10087,
+          "sha256": "4c824ebc290eff8740b44d956f4004d7470093879ce5704e99fffefb0ca31f87"
+        },
+        {
+          "path": "skills/video-review-autofix/scripts/video_qc.py",
+          "bytes": 31116,
+          "sha256": "a61edc186b4ff76a47ecd0169e6fe83a0e05cc0e2f8c00aed2a0cc5f56af667e"
+        }
+      ],
+      "license": "MIT"
     }
   ]
 }

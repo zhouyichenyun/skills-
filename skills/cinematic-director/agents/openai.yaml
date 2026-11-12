@@ -1,0 +1,6 @@
+interface:
+  display_name: "电影导演与口播视觉设计"
+  short_description: "设计镜头、表演、B-roll、连续性与调色意图，交接剪映和达芬奇"
+  default_prompt: "使用 $cinematic-director 设计镜头与口播视觉方案，交给剪辑和审片技能执行。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "视频审片与自动纠错"
+  short_description: "检查成片、修复有依据的技术问题并复检，保留视觉审片边界"
+  default_prompt: "使用 $video-review-autofix 检查成片，对有依据的问题修复新副本并重新审核。"
+policy:
+  allow_implicit_invocation: true

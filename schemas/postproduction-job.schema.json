@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Talking-head postproduction job v1",
+  "type": "object",
+  "required": ["version", "name", "fps", "width", "height", "clips"],
+  "properties": {
+    "version": {"const": 1},
+    "name": {"type": "string", "minLength": 1},
+    "fps": {"oneOf": [{"type": "number", "minimum": 1, "maximum": 240}, {"type": "string", "pattern": "^(?:[1-9][0-9]*(?:\\.[0-9]+)?|[1-9][0-9]*/[1-9][0-9]*)$"}]},
+    "width": {"type": "integer", "minimum": 16, "maximum": 7680, "multipleOf": 2},
+    "height": {"type": "integer", "minimum": 16, "maximum": 7680, "multipleOf": 2},
+    "clips": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "required": ["source", "start", "end"],
+      "properties": {
+        "id": {"type": "string"}, "source": {"type": "string", "minLength": 1},
+        "start": {"type": "number", "minimum": 0},
+        "end": {"type": "number", "exclusiveMinimum": 0}
+      }
+    }},
+    "broll": {"type": "array", "items": {
+      "type": "object", "required": ["source", "at", "duration"],
+      "properties": {
+        "source": {"type": "string", "minLength": 1},
+        "at": {"type": "number", "minimum": 0},
+        "duration": {"type": "number", "exclusiveMinimum": 0},
+        "source_start": {"type": "number", "minimum": 0},
+        "fit": {"const": "cover"}
+      }
+    }},
+    "subtitles": {"type": "array", "items": {
+      "type": "object", "required": ["start", "end", "text"],
+      "properties": {
+        "start": {"type": "number", "minimum": 0},
+        "end": {"type": "number", "exclusiveMinimum": 0},
+        "text": {"type": "string", "minLength": 1}
+      }
+    }},
+    "grade": {"type": "object", "properties": {
+      "preset": {"enum": ["neutral", "warm", "cool", "contrast"]},
+      "lut": {"type": ["string", "null"]}
+    }},
+    "audio": {"type": "object", "properties": {
+      "target_lufs": {"type": "number", "minimum": -30, "maximum": -9}
+    }}
+  },
+  "$comment": "Clip times are source seconds. B-roll and subtitle times are output-timeline seconds. Relative paths resolve against the job file. Runtime validation must also check end > start, media existence/ranges, timeline bounds, supported presets and even dimensions."
+}

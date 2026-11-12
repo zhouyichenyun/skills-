@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "status": "example_only_not_generated",
+  "needs": [
+    {
+      "id": "need-001",
+      "at": 3.0,
+      "duration": 2.5,
+      "purpose": "展示口播中提到的产品真实操作，以下为结构示例而非已观察事实",
+      "required_subject": "由实际转写和画面填写",
+      "candidates": [],
+      "selected_source": null,
+      "status": "needs_generation_or_user_asset",
+      "generation_brief": "待按真实需求编写；仅有此字段不代表已生成素材",
+      "visual_review": "not_performed",
+      "rights_basis": "not_provided"
+    }
+  ]
+}

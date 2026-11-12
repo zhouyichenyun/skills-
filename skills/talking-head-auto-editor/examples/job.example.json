@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "name": "口播示例-请替换真实素材路径",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "clips": [{"id":"a1","source":"../media/speaker.mp4","start":0.25,"end":6.75}],
+  "broll": [{"source":"../media/detail.mp4","at":2.0,"duration":2.5,"source_start":0.5,"fit":"cover"}],
+  "subtitles": [{"start":0.2,"end":2.4,"text":"请填入真实转写并检查字幕时间"}],
+  "grade": {"preset":"neutral","lut":null},
+  "audio": {"target_lufs":-16}
+}

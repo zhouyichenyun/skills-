@@ -1,0 +1,6 @@
+# Optional local transcription only. The renderer/exporter use Python stdlib.
+# Install into a virtual environment; prepare a local model separately.
+faster-whisper==1.2.1
+# PyAV 19 changed av.open arguments used by faster-whisper 1.2.1.
+# This pair was actually tested with a local tiny model and public English audio.
+av==16.1.0
