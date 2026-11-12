@@ -6,6 +6,8 @@ Frame-rate assumption throughout: 24 fps. Timecodes written `m:ss.d`; frame coun
 
 ## Pacing math
 
+Pacing numbers are planning aids, not acceptance criteria. First read the [narrative clarity gates](narrative-clarity-gates.md). Mark each actual take's usable event, the frame where its new information becomes readable, the necessary response/result, and any earned expectation held afterward. Cut from those marks; do not put every generated take on the timeline at full duration or trim to a uniform pulse. If the needed relation/reaction/result was never shot, declare missing coverage and redesign or supplement it. Crop-ins, transitions, louder music and speed changes do not create new camera coverage or missing story information.
+
 ### Average shot length by cutting register
 
 ASL is the mean, not the metronome. Use it to size the job, then distribute unevenly.

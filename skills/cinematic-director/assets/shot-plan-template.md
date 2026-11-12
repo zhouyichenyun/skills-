@@ -70,6 +70,14 @@ Use these three columns when the user wants a short answer, a chat-width table, 
 
 Read the plan column-wise before you read it row-wise. Each of these catches a different class of error.
 
+For narrative scenes, attach this compact information ledger before prompts or generation. Read it without the script: every answer must be perceivable in the planned picture/sound, not merely true in the story bible.
+
+| Shot / beat | Audience knows before → learns after | Objective / stimulus → perception → choice or result | Spatial / sound-source relation planted by | Retained seconds / why the hold earns them | Missing coverage / repair owner |
+|---|---|---|---|---|---|
+|  |  |  |  |  |  |
+
+An empty causal or relation cell is a PRE blocker. A beat may span shots, and one shot may cover several causal stages, but the assembled sequence must show the link. See [narrative clarity gates](../references/narrative-clarity-gates.md).
+
 - Every beat has at least one shot. The turn beat may have two or three; no other beat may have more shots than the turn beat.
 - Every shot has exactly one job. Two jobs means two shots, or one shot re-blocked so the second job disappears.
 - Read the Frame content column alone, top to bottom. It should tell the story without the other columns. If it reads as five variations on one picture, you have angles, not coverage.

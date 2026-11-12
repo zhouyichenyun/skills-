@@ -17,6 +17,8 @@ Worked examples use project `Under the Door` (`UTD`), scene 7, the five-shot sce
 
 ## Gate 1 — PRE-GENERATION
 
+For narrative scenes, first clear the six unweighted answers in [narrative clarity gates](../references/narrative-clarity-gates.md): viewpoint/objective, orientation, baseline/anomaly, causal response, sound relation, and information/duration. Missing answers block generation; weighted P scores apply only after this pass. A valid-looking keyframe is not proof that the story will read.
+
 | # | Weight | Category | Check |
 |---|---|---|---|
 | P1 | 20 | Story function | Every shot names a beat id and the job it does for that beat. A shot whose function is "it looks good" is deleted, not scored |
@@ -83,6 +85,8 @@ because `S` belongs to the four prompt shapes in
 [ai video tool adapters](../references/ai-video-tool-adapters.md); a `Q` in a QC note is always a
 sequence row.
 
+Run the normal-speed first-view protocol in [narrative clarity gates](../references/narrative-clarity-gates.md) before scoring Q rows. Record the actual final file/version, playback and sound evidence, reviewer prior context, the five comprehension answers and timestamped unresolved defects. Missing full-playback evidence means `sequence_review: pending`; do not promote sampled-frame/technical checks to `deliverable`.
+
 | # | Weight | Category | Check | F-codes |
 |---|---|---|---|---|
 | Q1 | 25 | Splice continuity | Identity, wardrobe, prop state, and light state hold across every splice; end state of shot N matches start state of N+1 | F1, F7, F19 |
@@ -94,6 +98,8 @@ sequence row.
 
 Threshold to deliver: **85 / 100**. The sequence gate is stricter than the clip gate because
 sequence errors are the ones an audience actually notices — nobody watches a clip in isolation.
+
+For narrative work Q6 is also a **hard blocker**, despite its scoring weight. If the first-view event, objective, causal relation or reveal baseline is unreadable, the sequence fails even with a score above 85. Q2/Q3/Q5 failures that prevent those answers also block delivery. A technically sound export may be retained as a candidate while the story is reworked; it is not an approved final.
 
 ## Blockers — must fix regardless of score
 
@@ -111,6 +117,7 @@ A clip or cut carrying any of these does not ship, even at 95.
 - Audio contradicting picture: lips that do not match the line, room tone that changes at a
   splice (F15, F18).
 - Anything the user or the book listed explicitly under `must avoid` or `never`.
+- A narrative event whose essential objective, spatial/sound relation or causal change is only understandable from the script rather than the rendered cut; a reveal with no perceptible baseline; or missing reaction/consequence coverage that breaks the event. Route to writer/director/editor, not automatic regeneration.
 
 Everything else is negotiable against schedule. These are not.
 

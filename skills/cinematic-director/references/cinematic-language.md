@@ -19,6 +19,8 @@ optics, and a Super-35 number will be taken literally.
 
 Function first, size second. If you cannot name the function, you do not have a shot.
 
+Name the **audience's observable information change**, not just a production intention. “Clue” is not enough if viewers have not seen where the object is, who notices it or what it changes. Before an insert, establish the relation that lets the detail mean something; before a reaction, establish what is perceived. One continuous reveal can do this without extra cuts. See [narrative clarity gates](narrative-clarity-gates.md); more angles or camera movement cannot repair an absent causal beat.
+
 | Function | Typical use | Good for | Fails when |
 |---|---|---|---|
 | Establishing | Define location, scale, atmosphere | Opening, act transition, isolation | Geography is already clear — it becomes a postcard and kills pace |

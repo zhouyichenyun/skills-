@@ -138,6 +138,7 @@ Defaults when unspecified:
 ## Hard rules
 
 1. **Story function first.** A shot with no story function is deleted, not improved.
+   For narrative work, apply [narrative clarity gates](references/narrative-clarity-gates.md) before generating and before delivery. First-view comprehension is a hard gate; a technical score cannot compensate for it.
 2. **Blocking before framing.** Decide what bodies do in space, then place the camera. A well-blocked scene reads even shot flat.
 3. **One dominant camera move and one primary action per clip.** No move at all is a legitimate choice and often the better one. Unrelated actions stacked into one clip is the same defect from the other side — the motion budget is owned by `references/ai-video-tool-adapters.md`.
 4. **Every action has an end state.** "He turns" is not a shot. "He turns until his profile is against the window, then stops" is.
@@ -207,6 +208,8 @@ Depth: `references/blocking-and-staging.md` — staging geometries, proxemics, b
 ### 7. Shot list and coverage
 
 Build rows only after beats and blocking are clear. Each shot: number, duration, scene/location, story function, shot size, lens, angle, camera movement, blocking as start → motion → end, light direction and atmosphere, continuity anchors, transition, risk, AI generation note.
+
+For narrative scenes, also fill the compact audience-information ledger in [shot plan](assets/shot-plan-template.md): what the audience knows before and after, the action or sound that triggers the cut, who sees/hears it, and the visible consequence. A story function written in a prompt is an intention, not evidence that viewers can infer it.
 
 Template: `assets/shot-plan-template.md`. Grammar: `references/cinematic-language.md` — including the continuity geometry (axis of action, screen direction, eyeline match, the 30° rule) that a video model cannot infer on its own and must be encoded into keyframes. Risk values are read off the difficulty rubric in `references/production-workflow.md`; do not invent a second scale.
 
@@ -290,11 +293,15 @@ Plan five layers per shot: room tone, ambience, foley, spot effects, score. For 
 
 Generated clips are raw material, not a cut. Specify the timeline: clip order, in/out points, trim handles, transition into each clip, and the audio layers running underneath. Design match cuts by building shot A's last frame and shot B's first frame together. Fix what can be fixed with a cutaway, a trim, or a dissolve rather than another generation.
 
+Generation duration is never the default shot duration. Select the usable event inside each take and justify the retained hold by information, expectation, performance or consequence. A missing relation/decision/result shot is a coverage defect: record the gap and re-plan it instead of manufacturing fast cuts, digital pushes or explanatory captions.
+
 Template: `assets/edit-timeline-template.md`. Depth: `references/editing-and-assembly.md`.
 
 ### 13. QC and repair loop
 
 Gate with `assets/qc-checklist.md` when scoring a clip or a batch. When something fails, diagnose in this order — each bucket with the codes it usually resolves to:
+
+For narrative work, first run the unweighted clarity blockers in [narrative clarity gates](references/narrative-clarity-gates.md). If the objective, geography, sound relation or causal change is unreadable, route back to the writer/director/editor before trying generation-prompt repairs. Technical acceptance, clip usability, sequence comprehension and delivery availability are separate conclusions. Only normal-speed review of the final encoded cut can support a sequence verdict; sampled frames or the planned script cannot.
 
 1. **Asset mismatch** — references too inconsistent to hold identity (F1, F3, F16).
 2. **Prompt overload** — over motion budget: too many actions or camera moves (F4, F6).
