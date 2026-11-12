@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "title": "尚未生成素材的角色与故事规划示例",
+  "characters": [
+    {"id": "CHAR_01", "name": "林岚", "locked_traits": {"hair": "齐肩黑发", "costume": "灰色长外套", "prop": "深蓝色陶杯"}, "selected_asset_id": null}
+  ],
+  "scenes": [
+    {"id": "SCENE_01", "name": "晨间工作室", "locked_facts": {"door": "北墙", "window": "东墙", "table": "房间中央", "light": "东侧清晨窗光"}, "selected_asset_id": null}
+  ],
+  "assets": [
+    {"id": "ASSET_CHAR_FRONT", "kind": "character", "status": "planned", "path": null, "character_ids": ["CHAR_01"], "view": "front"},
+    {"id": "ASSET_SCENE_BASE", "kind": "scene", "status": "planned", "path": null, "scene_id": "SCENE_01"}
+  ],
+  "shots": [
+    {"id": "SHOT_01", "order": 1, "scene_id": "SCENE_01", "character_ids": ["CHAR_01"], "continuity_group": "main", "start_state": {"CHAR_01.location": "桌边", "PROP_CUP.holder": "桌面"}, "action": "林岚用右手拿起桌面上的深蓝陶杯。", "end_state": {"CHAR_01.location": "桌边", "PROP_CUP.holder": "CHAR_01.right_hand"}, "selected_asset_id": null, "depends_on": []},
+    {"id": "SHOT_02", "order": 2, "scene_id": "SCENE_01", "character_ids": ["CHAR_01"], "continuity_group": "main", "start_state": {"CHAR_01.location": "桌边", "PROP_CUP.holder": "CHAR_01.right_hand"}, "action": "林岚右手持杯走向东侧窗边，停下看向窗外。", "end_state": {"CHAR_01.location": "东窗边", "PROP_CUP.holder": "CHAR_01.right_hand"}, "selected_asset_id": null, "depends_on": ["SHOT_01"]}
+  ],
+  "candidates": [],
+  "limits": {"candidates_per_round": 3, "max_rounds": 2}
+}

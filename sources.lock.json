@@ -1,294 +1,82 @@
 {
   "schema_version": 1,
   "configured_on": "2026-11-12",
-  "target_environment": "Windows: Jianying/CapCut and DaVinci Resolve",
+  "target_environment": "Windows: Jianying/CapCut and DaVinci Resolve; offline story canvas by default",
   "skills": [
     {
-      "name": "video-shots",
-      "upstream_repository": "eternityspring/reelbench-skills",
-      "upstream_commit": "8d8444894524c9beedbf8815dab517afb3ce3cbe",
-      "upstream_path": "skills/video-shots",
-      "license": "Apache-2.0",
-      "omitted_nonruntime_files": [
-        "assets/report.png",
-        "assets/report-mobile.png"
-      ],
-      "files": [
-        {
-          "path": "skills/video-shots/LICENSE",
-          "upstream_path": "LICENSE",
-          "git_blob_sha": "ff9ad4530f5716304e042cbac72cecd7c40f0e0e",
-          "bytes": 11359
-        },
-        {
-          "path": "skills/video-shots/README.en.md",
-          "upstream_path": "skills/video-shots/README.en.md",
-          "git_blob_sha": "f846cde927f54af6da78df46d87aa8d3d5d0524a",
-          "bytes": 9868
-        },
-        {
-          "path": "skills/video-shots/README.md",
-          "upstream_path": "skills/video-shots/README.md",
-          "git_blob_sha": "01d757d08d26d29d3385ea5973ba8b5a14d6c563",
-          "bytes": 8467
-        },
-        {
-          "path": "skills/video-shots/SKILL.md",
-          "upstream_path": "skills/video-shots/SKILL.md",
-          "git_blob_sha": "11b07396a79418f285553aaae62caa0c758e61f1",
-          "bytes": 13821
-        },
-        {
-          "path": "skills/video-shots/examples/demo-shots.json",
-          "upstream_path": "skills/video-shots/examples/demo-shots.json",
-          "git_blob_sha": "9cd1f1e032dbf5513f1b5dcf8e9a653889bc3716",
-          "bytes": 31686
-        },
-        {
-          "path": "skills/video-shots/examples/demo-track.json",
-          "upstream_path": "skills/video-shots/examples/demo-track.json",
-          "git_blob_sha": "4d1402661c409ba88d89be20cf3f6a3de7e616d6",
-          "bytes": 3926
-        },
-        {
-          "path": "skills/video-shots/references/analysis-pass.md",
-          "upstream_path": "skills/video-shots/references/analysis-pass.md",
-          "git_blob_sha": "2eb77af63c6f2da1d2b27970ece5ec5f1345b40d",
-          "bytes": 5624
-        },
-        {
-          "path": "skills/video-shots/references/report-style.md",
-          "upstream_path": "skills/video-shots/references/report-style.md",
-          "git_blob_sha": "a825fd94828ebcf8c2469abbe20e5dcd1aff554a",
-          "bytes": 5579
-        },
-        {
-          "path": "skills/video-shots/references/schema.md",
-          "upstream_path": "skills/video-shots/references/schema.md",
-          "git_blob_sha": "afc383d76e452c47d5ba54b810296108acaff1b6",
-          "bytes": 5372
-        },
-        {
-          "path": "skills/video-shots/references/taxonomy.md",
-          "upstream_path": "skills/video-shots/references/taxonomy.md",
-          "git_blob_sha": "7f06afe64de7fcc0b5939ee2d03146c5c223b1fc",
-          "bytes": 11939
-        },
-        {
-          "path": "skills/video-shots/scripts/report.css",
-          "upstream_path": "skills/video-shots/scripts/report.css",
-          "git_blob_sha": "0977da190ff3f3ede1caea5b559fd2b9fcc035eb",
-          "bytes": 33842
-        },
-        {
-          "path": "skills/video-shots/scripts/report.js",
-          "upstream_path": "skills/video-shots/scripts/report.js",
-          "git_blob_sha": "bd2d193ce94caf6e2f7ad75e9edb731610b6f19a",
-          "bytes": 20988
-        },
-        {
-          "path": "skills/video-shots/scripts/selftest.mjs",
-          "upstream_path": "skills/video-shots/scripts/selftest.mjs",
-          "git_blob_sha": "2532c332aee6124b40c19fac3384fd45d274619e",
-          "bytes": 36055
-        },
-        {
-          "path": "skills/video-shots/scripts/video-shots.mjs",
-          "upstream_path": "skills/video-shots/scripts/video-shots.mjs",
-          "git_blob_sha": "8c2372ea70af78ae8cebaf59bacf73914791e066",
-          "bytes": 77449
-        }
-      ],
-      "verification": {
-        "selftest_assertions_passed": 449,
-        "synthetic_video_seconds": 6,
-        "shots": 3,
-        "keyframes": 6,
-        "contact_sheets": 2,
-        "manual_cut_correction_applied": true,
-        "validation_passed": 14,
-        "validation_skipped": [
-          "cast: synthetic footage has no people"
-        ]
-      }
-    },
-    {
-      "name": "cinematic-video-prompt-engineer",
-      "upstream_repository": "CyberJ0605/cinematic-video-prompt-engineer-skill",
-      "upstream_commit": "135663a5ba1f2618c180d6a06f21ec79b5a90aef",
-      "upstream_path": "cinematic-video-prompt-engineer",
-      "license": "MIT",
-      "omitted_nonruntime_files": [],
-      "files": [
-        {
-          "path": "skills/cinematic-video-prompt-engineer/LICENSE",
-          "upstream_path": "LICENSE",
-          "git_blob_sha": "0ed078ebac4a7e13584914c237ad1114de0f813c",
-          "bytes": 1067
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/SKILL.md",
-          "upstream_path": "cinematic-video-prompt-engineer/SKILL.md",
-          "git_blob_sha": "e1f2278a0217ebe2d37e390f3849b839cf415947",
-          "bytes": 49272
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/agents/openai.yaml",
-          "upstream_path": "cinematic-video-prompt-engineer/agents/openai.yaml",
-          "git_blob_sha": "6027ba3805d9a86b045a040f51ad6ec7ed77751d",
-          "bytes": 324
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/references/camera_movement_prompt_library.md",
-          "upstream_path": "cinematic-video-prompt-engineer/references/camera_movement_prompt_library.md",
-          "git_blob_sha": "3b0f4231506e123d806b91bbf70b7a3b24135da6",
-          "bytes": 15425
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/references/character_card_prompts.md",
-          "upstream_path": "cinematic-video-prompt-engineer/references/character_card_prompts.md",
-          "git_blob_sha": "4354f4f977e931ab20ca6508fade1a47518f7db1",
-          "bytes": 5823
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/references/chase_action_coverage.md",
-          "upstream_path": "cinematic-video-prompt-engineer/references/chase_action_coverage.md",
-          "git_blob_sha": "949f7d6ddd4a924d3347145ac7642e33312a962d",
-          "bytes": 6401
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/references/continuation_workflow.md",
-          "upstream_path": "cinematic-video-prompt-engineer/references/continuation_workflow.md",
-          "git_blob_sha": "e0d795bde0f5bd64b905616b707fe276c1ae15dc",
-          "bytes": 4213
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/references/continuity_director_contract.md",
-          "upstream_path": "cinematic-video-prompt-engineer/references/continuity_director_contract.md",
-          "git_blob_sha": "f72096a48236d7f23bd2d2a9055ee7968aae3394",
-          "bytes": 11093
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/references/director_modules.md",
-          "upstream_path": "cinematic-video-prompt-engineer/references/director_modules.md",
-          "git_blob_sha": "0f1c75ab77e8535abd8cc0a71895de359e55de89",
-          "bytes": 26627
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/references/emotion_performance_prompt_library.md",
-          "upstream_path": "cinematic-video-prompt-engineer/references/emotion_performance_prompt_library.md",
-          "git_blob_sha": "986e43b223138eb8ef82c935c608ac67ea28ab44",
-          "bytes": 9475
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/references/evaluation_cases.md",
-          "upstream_path": "cinematic-video-prompt-engineer/references/evaluation_cases.md",
-          "git_blob_sha": "d6b84e5e43ef1aeef4410ab1a02166fa313eddc8",
-          "bytes": 114707
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/references/field_validation_inputs.md",
-          "upstream_path": "cinematic-video-prompt-engineer/references/field_validation_inputs.md",
-          "git_blob_sha": "20f90fcb4bb31e9d947d610f9473c11c4e8baf4d",
-          "bytes": 6386
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/references/field_validation_probes.md",
-          "upstream_path": "cinematic-video-prompt-engineer/references/field_validation_probes.md",
-          "git_blob_sha": "989b9130b4d8d38f21a665c63f09eee8b2febd02",
-          "bytes": 4563
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/references/multimodal_reference_roles.md",
-          "upstream_path": "cinematic-video-prompt-engineer/references/multimodal_reference_roles.md",
-          "git_blob_sha": "b6b46d2afe1e9f788a63c1c18a9d0cd90a0234e5",
-          "bytes": 3131
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/references/one_take_emotional_coverage.md",
-          "upstream_path": "cinematic-video-prompt-engineer/references/one_take_emotional_coverage.md",
-          "git_blob_sha": "0c96263138a27be9e0119767a0fef6e1fb805e1d",
-          "bytes": 7822
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/references/reference_first_video_workflow.md",
-          "upstream_path": "cinematic-video-prompt-engineer/references/reference_first_video_workflow.md",
-          "git_blob_sha": "931ef1a25f308ec94036df4bb041ec47dfda4257",
-          "bytes": 37436
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/references/reference_prompt_content.md",
-          "upstream_path": "cinematic-video-prompt-engineer/references/reference_prompt_content.md",
-          "git_blob_sha": "4789f3e2f92bc842eeeaee97328899ab56d36a69",
-          "bytes": 5393
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/references/style_patterns.md",
-          "upstream_path": "cinematic-video-prompt-engineer/references/style_patterns.md",
-          "git_blob_sha": "4b69a7fc869ad175ceda8a7ab0de18cc95c3e63d",
-          "bytes": 282713
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/references/vertical_9x16_adaptation.md",
-          "upstream_path": "cinematic-video-prompt-engineer/references/vertical_9x16_adaptation.md",
-          "git_blob_sha": "798a8357889feb0cf76d355e3dd1354ddaa4c6b6",
-          "bytes": 8826
-        },
-        {
-          "path": "skills/cinematic-video-prompt-engineer/scripts/read_sections.py",
-          "upstream_path": "cinematic-video-prompt-engineer/scripts/read_sections.py",
-          "git_blob_sha": "c2d41d0869bd8311ce435eb12787923c4ce1f414",
-          "bytes": 4122
-        }
-      ],
-      "verification": {
-        "reference_links_missing": 0,
-        "section_list_smoke": "passed",
-        "section_read_smoke": "passed"
-      }
-    },
-    {
-      "name": "talking-head-writer",
+      "name": "audio-production-director",
       "local_version": "1.0.0",
       "origin": "original project implementation",
+      "license": "MIT",
       "verification": "VERIFICATION.md",
       "files": [
         {
-          "path": "skills/talking-head-writer/SKILL.md",
-          "bytes": 6893,
-          "sha256": "8c2fca0b900e7220dca2331d0c706730af9702ab199c92da463706ee8a3bdbf4"
+          "path": "skills/audio-production-director/LICENSE",
+          "bytes": 1083,
+          "sha256": "f496e36497764a6a7df6b9137deab3ed4e8262a7d5632b4403817f714dc916ce"
         },
         {
-          "path": "skills/talking-head-writer/agents/openai.yaml",
-          "bytes": 430,
-          "sha256": "f3a45c993b934e14c209c3355a02afffd0bb742960916ae5d2559341aad3c5fc"
+          "path": "skills/audio-production-director/PROVENANCE.md",
+          "bytes": 492,
+          "sha256": "fae179d2761c5d4c29197082e7280238896aa5ff681e8c3fb24309a59bb065c2"
         },
         {
-          "path": "skills/talking-head-writer/examples/short-talking-head.md",
-          "bytes": 4348,
-          "sha256": "7ea5c67c06dff106fc54c0d2b0120aa35da7ab6be165f0f9fdfd78e47fe1bbe1"
+          "path": "skills/audio-production-director/README.md",
+          "bytes": 717,
+          "sha256": "92dc311f0fa7eae943012beb7a4e15373e898ad626573aa49f08591f3903855f"
         },
         {
-          "path": "skills/talking-head-writer/references/broll-brief.md",
-          "bytes": 3266,
-          "sha256": "50ed5691bdf15d44b40d02f096b07cf2b9b5e339dcccff7312a84fd9c65a3474"
+          "path": "skills/audio-production-director/SKILL.md",
+          "bytes": 7701,
+          "sha256": "d6017117f1911e4b720b06592272bb89b42c91787735c40076ee58cecd60b4e8"
         },
         {
-          "path": "skills/talking-head-writer/references/handoff-contract.md",
-          "bytes": 3178,
-          "sha256": "6468930d990164c0f10b73372038f10bc32451de50090954fb9ee834af829227"
+          "path": "skills/audio-production-director/agents/openai.yaml",
+          "bytes": 358,
+          "sha256": "77b34bb1d41cbec3817472a045ee0d78687175bbcca9d1a23eae164e3b278d06"
         },
         {
-          "path": "skills/talking-head-writer/references/script-structure.md",
-          "bytes": 2496,
-          "sha256": "4a59693759c6db5028d1f39828b15532ac037a5300618962e233670fac0e9afa"
+          "path": "skills/audio-production-director/examples/plan-shape.md",
+          "bytes": 1377,
+          "sha256": "71451a7f0670012ee95b59172b994f2d267153952839db325af369f2fc2c26bf"
         },
         {
-          "path": "skills/talking-head-writer/references/transcript-editing.md",
-          "bytes": 3054,
-          "sha256": "e960e9759ea988b87ab1ccbc6459c92a3f91007f19653f7d3b3d267fe3ee3ec1"
+          "path": "skills/audio-production-director/references/audio-review.md",
+          "bytes": 1728,
+          "sha256": "3fc34af82da1aa6c7ec9e039a8d18ac5d9567fa4249419991b740a7d3a598cf7"
+        },
+        {
+          "path": "skills/audio-production-director/references/editing-profiles.md",
+          "bytes": 2397,
+          "sha256": "c15ab1c4fc47463e8c2a71cf0a02713212de1841e78bc6d47615e54d8be1bf6a"
+        },
+        {
+          "path": "skills/audio-production-director/references/generation-routing.md",
+          "bytes": 3155,
+          "sha256": "47e368f02fce04bd410c55547d1d5381c57328e74db6a3c16d50cbb64d0e0f8b"
+        },
+        {
+          "path": "skills/audio-production-director/references/timeline-and-mixing.md",
+          "bytes": 2972,
+          "sha256": "e8681c0848428b18ad6eef38946f93a1e4ad373ff7101cf31d1bdc26b4a00fee"
+        },
+        {
+          "path": "skills/audio-production-director/scripts/audio.py",
+          "bytes": 25241,
+          "sha256": "05202e1aacb821a5246f875c9ac2a1b803d5ff5a344222be70c8cc6182e7fc33"
+        },
+        {
+          "path": "skills/audio-production-director/scripts/audio_nle.py",
+          "bytes": 14744,
+          "sha256": "ce0a1872cc63323a4e5aac81b5aa663ba2d908c4d0c2b1d50797fa15c4e48150"
+        },
+        {
+          "path": "skills/audio-production-director/scripts/selftest.py",
+          "bytes": 11104,
+          "sha256": "96f74515d80e9a6c3ba92fe6475069aa4beb95a9deae86095eeb719d328ab6fb"
         }
-      ]
+      ],
+      "configuration_generation_calls": 0
     },
     {
       "name": "cinematic-director",
@@ -719,8 +507,213 @@
       ]
     },
     {
-      "name": "talking-head-auto-editor",
+      "name": "cinematic-video-prompt-engineer",
+      "upstream_repository": "CyberJ0605/cinematic-video-prompt-engineer-skill",
+      "upstream_commit": "135663a5ba1f2618c180d6a06f21ec79b5a90aef",
+      "upstream_path": "cinematic-video-prompt-engineer",
+      "license": "MIT",
+      "omitted_nonruntime_files": [],
+      "files": [
+        {
+          "path": "skills/cinematic-video-prompt-engineer/LICENSE",
+          "upstream_path": "LICENSE",
+          "git_blob_sha": "0ed078ebac4a7e13584914c237ad1114de0f813c",
+          "bytes": 1067
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/SKILL.md",
+          "upstream_path": "cinematic-video-prompt-engineer/SKILL.md",
+          "git_blob_sha": "e1f2278a0217ebe2d37e390f3849b839cf415947",
+          "bytes": 49272
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/agents/openai.yaml",
+          "upstream_path": "cinematic-video-prompt-engineer/agents/openai.yaml",
+          "git_blob_sha": "6027ba3805d9a86b045a040f51ad6ec7ed77751d",
+          "bytes": 324
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/references/camera_movement_prompt_library.md",
+          "upstream_path": "cinematic-video-prompt-engineer/references/camera_movement_prompt_library.md",
+          "git_blob_sha": "3b0f4231506e123d806b91bbf70b7a3b24135da6",
+          "bytes": 15425
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/references/character_card_prompts.md",
+          "upstream_path": "cinematic-video-prompt-engineer/references/character_card_prompts.md",
+          "git_blob_sha": "4354f4f977e931ab20ca6508fade1a47518f7db1",
+          "bytes": 5823
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/references/chase_action_coverage.md",
+          "upstream_path": "cinematic-video-prompt-engineer/references/chase_action_coverage.md",
+          "git_blob_sha": "949f7d6ddd4a924d3347145ac7642e33312a962d",
+          "bytes": 6401
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/references/continuation_workflow.md",
+          "upstream_path": "cinematic-video-prompt-engineer/references/continuation_workflow.md",
+          "git_blob_sha": "e0d795bde0f5bd64b905616b707fe276c1ae15dc",
+          "bytes": 4213
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/references/continuity_director_contract.md",
+          "upstream_path": "cinematic-video-prompt-engineer/references/continuity_director_contract.md",
+          "git_blob_sha": "f72096a48236d7f23bd2d2a9055ee7968aae3394",
+          "bytes": 11093
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/references/director_modules.md",
+          "upstream_path": "cinematic-video-prompt-engineer/references/director_modules.md",
+          "git_blob_sha": "0f1c75ab77e8535abd8cc0a71895de359e55de89",
+          "bytes": 26627
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/references/emotion_performance_prompt_library.md",
+          "upstream_path": "cinematic-video-prompt-engineer/references/emotion_performance_prompt_library.md",
+          "git_blob_sha": "986e43b223138eb8ef82c935c608ac67ea28ab44",
+          "bytes": 9475
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/references/evaluation_cases.md",
+          "upstream_path": "cinematic-video-prompt-engineer/references/evaluation_cases.md",
+          "git_blob_sha": "d6b84e5e43ef1aeef4410ab1a02166fa313eddc8",
+          "bytes": 114707
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/references/field_validation_inputs.md",
+          "upstream_path": "cinematic-video-prompt-engineer/references/field_validation_inputs.md",
+          "git_blob_sha": "20f90fcb4bb31e9d947d610f9473c11c4e8baf4d",
+          "bytes": 6386
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/references/field_validation_probes.md",
+          "upstream_path": "cinematic-video-prompt-engineer/references/field_validation_probes.md",
+          "git_blob_sha": "989b9130b4d8d38f21a665c63f09eee8b2febd02",
+          "bytes": 4563
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/references/multimodal_reference_roles.md",
+          "upstream_path": "cinematic-video-prompt-engineer/references/multimodal_reference_roles.md",
+          "git_blob_sha": "b6b46d2afe1e9f788a63c1c18a9d0cd90a0234e5",
+          "bytes": 3131
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/references/one_take_emotional_coverage.md",
+          "upstream_path": "cinematic-video-prompt-engineer/references/one_take_emotional_coverage.md",
+          "git_blob_sha": "0c96263138a27be9e0119767a0fef6e1fb805e1d",
+          "bytes": 7822
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/references/reference_first_video_workflow.md",
+          "upstream_path": "cinematic-video-prompt-engineer/references/reference_first_video_workflow.md",
+          "git_blob_sha": "931ef1a25f308ec94036df4bb041ec47dfda4257",
+          "bytes": 37436
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/references/reference_prompt_content.md",
+          "upstream_path": "cinematic-video-prompt-engineer/references/reference_prompt_content.md",
+          "git_blob_sha": "4789f3e2f92bc842eeeaee97328899ab56d36a69",
+          "bytes": 5393
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/references/style_patterns.md",
+          "upstream_path": "cinematic-video-prompt-engineer/references/style_patterns.md",
+          "git_blob_sha": "4b69a7fc869ad175ceda8a7ab0de18cc95c3e63d",
+          "bytes": 282713
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/references/vertical_9x16_adaptation.md",
+          "upstream_path": "cinematic-video-prompt-engineer/references/vertical_9x16_adaptation.md",
+          "git_blob_sha": "798a8357889feb0cf76d355e3dd1354ddaa4c6b6",
+          "bytes": 8826
+        },
+        {
+          "path": "skills/cinematic-video-prompt-engineer/scripts/read_sections.py",
+          "upstream_path": "cinematic-video-prompt-engineer/scripts/read_sections.py",
+          "git_blob_sha": "c2d41d0869bd8311ce435eb12787923c4ce1f414",
+          "bytes": 4122
+        }
+      ],
+      "verification": {
+        "reference_links_missing": 0,
+        "section_list_smoke": "passed",
+        "section_read_smoke": "passed"
+      }
+    },
+    {
+      "name": "story-canvas-producer",
       "local_version": "1.0.0",
+      "origin": "original project implementation",
+      "license": "MIT",
+      "verification": "VERIFICATION.md",
+      "files": [
+        {
+          "path": "skills/story-canvas-producer/LICENSE",
+          "bytes": 1083,
+          "sha256": "f496e36497764a6a7df6b9137deab3ed4e8262a7d5632b4403817f714dc916ce"
+        },
+        {
+          "path": "skills/story-canvas-producer/PROVENANCE.md",
+          "bytes": 478,
+          "sha256": "501f30a843f288f94d63c1de5cc2009b7351cec03420d82122b4b90438635446"
+        },
+        {
+          "path": "skills/story-canvas-producer/README.md",
+          "bytes": 659,
+          "sha256": "b20c800c720039173121a9ae16e93658d96708309dedb3d513a7692ab8f9d32f"
+        },
+        {
+          "path": "skills/story-canvas-producer/SKILL.md",
+          "bytes": 7270,
+          "sha256": "028d7e1615904f7a31c66f9bed9189c1cb222eab39d3397d845638da70d6d8df"
+        },
+        {
+          "path": "skills/story-canvas-producer/agents/openai.yaml",
+          "bytes": 381,
+          "sha256": "2e5d647708992d2d728778872ab4195f13242f82320901b27bee71a8ebf5ee49"
+        },
+        {
+          "path": "skills/story-canvas-producer/examples/planned-story.json",
+          "bytes": 1644,
+          "sha256": "90e93b16956b63fba52aa1903d38392527b04ac4ade07f52fa59e96348ed4cb4"
+        },
+        {
+          "path": "skills/story-canvas-producer/references/candidate-review.md",
+          "bytes": 2069,
+          "sha256": "2fe85de4577751dd9af4de306d155f841325749a8382b84c1ba666395668b523"
+        },
+        {
+          "path": "skills/story-canvas-producer/references/canvas-routing.md",
+          "bytes": 2986,
+          "sha256": "d4d1e859d41358416902862d763e1a3f86cc45786e81635c853e9eb930b29339"
+        },
+        {
+          "path": "skills/story-canvas-producer/references/character-and-scene-assets.md",
+          "bytes": 2114,
+          "sha256": "0a726f1559d3553edfab703be153df6bf2dacdf6ec37fe262a66b73d21c97879"
+        },
+        {
+          "path": "skills/story-canvas-producer/references/continuity-and-handoff.md",
+          "bytes": 1956,
+          "sha256": "1bb226726d3cd73c96f64312cde5ba4174eaa61c1591bf650355b2dd94bf9620"
+        },
+        {
+          "path": "skills/story-canvas-producer/scripts/selftest.py",
+          "bytes": 13403,
+          "sha256": "4ac883c404e748008c2c8ba2c4a567630febb447018cc80fe7fda1100681bacc"
+        },
+        {
+          "path": "skills/story-canvas-producer/scripts/story_board.py",
+          "bytes": 38361,
+          "sha256": "8df5bfabd6e76c67b15d555a6d939a00287192f890afffb71bb31c51024af410"
+        }
+      ],
+      "configuration_generation_calls": 0
+    },
+    {
+      "name": "talking-head-auto-editor",
+      "local_version": "1.1.0",
       "origin": "original project implementation",
       "verification": "VERIFICATION.md",
       "files": [
@@ -736,8 +729,8 @@
         },
         {
           "path": "skills/talking-head-auto-editor/SKILL.md",
-          "bytes": 8872,
-          "sha256": "f6de735f762383bb456e101bc007ce8fd8a9a53a3009415a8e1d9d419aa64164"
+          "bytes": 9288,
+          "sha256": "3ddb0da894f695d8918ebe87b53b4c8f0ea3cda30d23336e7a9060964d842663"
         },
         {
           "path": "skills/talking-head-auto-editor/agents/openai.yaml",
@@ -758,6 +751,11 @@
           "path": "skills/talking-head-auto-editor/references/asset-selection.md",
           "bytes": 2193,
           "sha256": "fe315e2e8e77283767c6afe99d57086e3a1c87be364e8477cfe1af12043c71d6"
+        },
+        {
+          "path": "skills/talking-head-auto-editor/references/audio-production-handoff.md",
+          "bytes": 1333,
+          "sha256": "421e2a0a3065d00ee4a459c9707a5a4bf3c8933c745615d69b9f057170e8ae6a"
         },
         {
           "path": "skills/talking-head-auto-editor/references/job-and-interchange.md",
@@ -791,6 +789,49 @@
         }
       ],
       "license": "MIT"
+    },
+    {
+      "name": "talking-head-writer",
+      "local_version": "1.0.0",
+      "origin": "original project implementation",
+      "verification": "VERIFICATION.md",
+      "files": [
+        {
+          "path": "skills/talking-head-writer/SKILL.md",
+          "bytes": 6893,
+          "sha256": "8c2fca0b900e7220dca2331d0c706730af9702ab199c92da463706ee8a3bdbf4"
+        },
+        {
+          "path": "skills/talking-head-writer/agents/openai.yaml",
+          "bytes": 430,
+          "sha256": "f3a45c993b934e14c209c3355a02afffd0bb742960916ae5d2559341aad3c5fc"
+        },
+        {
+          "path": "skills/talking-head-writer/examples/short-talking-head.md",
+          "bytes": 4348,
+          "sha256": "7ea5c67c06dff106fc54c0d2b0120aa35da7ab6be165f0f9fdfd78e47fe1bbe1"
+        },
+        {
+          "path": "skills/talking-head-writer/references/broll-brief.md",
+          "bytes": 3266,
+          "sha256": "50ed5691bdf15d44b40d02f096b07cf2b9b5e339dcccff7312a84fd9c65a3474"
+        },
+        {
+          "path": "skills/talking-head-writer/references/handoff-contract.md",
+          "bytes": 3178,
+          "sha256": "6468930d990164c0f10b73372038f10bc32451de50090954fb9ee834af829227"
+        },
+        {
+          "path": "skills/talking-head-writer/references/script-structure.md",
+          "bytes": 2496,
+          "sha256": "4a59693759c6db5028d1f39828b15532ac037a5300618962e233670fac0e9afa"
+        },
+        {
+          "path": "skills/talking-head-writer/references/transcript-editing.md",
+          "bytes": 3054,
+          "sha256": "e960e9759ea988b87ab1ccbc6459c92a3f91007f19653f7d3b3d267fe3ee3ec1"
+        }
+      ]
     },
     {
       "name": "video-review-autofix",
@@ -840,6 +881,115 @@
         }
       ],
       "license": "MIT"
+    },
+    {
+      "name": "video-shots",
+      "upstream_repository": "eternityspring/reelbench-skills",
+      "upstream_commit": "8d8444894524c9beedbf8815dab517afb3ce3cbe",
+      "upstream_path": "skills/video-shots",
+      "license": "Apache-2.0",
+      "omitted_nonruntime_files": [
+        "assets/report.png",
+        "assets/report-mobile.png"
+      ],
+      "files": [
+        {
+          "path": "skills/video-shots/LICENSE",
+          "upstream_path": "LICENSE",
+          "git_blob_sha": "ff9ad4530f5716304e042cbac72cecd7c40f0e0e",
+          "bytes": 11359
+        },
+        {
+          "path": "skills/video-shots/README.en.md",
+          "upstream_path": "skills/video-shots/README.en.md",
+          "git_blob_sha": "f846cde927f54af6da78df46d87aa8d3d5d0524a",
+          "bytes": 9868
+        },
+        {
+          "path": "skills/video-shots/README.md",
+          "upstream_path": "skills/video-shots/README.md",
+          "git_blob_sha": "01d757d08d26d29d3385ea5973ba8b5a14d6c563",
+          "bytes": 8467
+        },
+        {
+          "path": "skills/video-shots/SKILL.md",
+          "upstream_path": "skills/video-shots/SKILL.md",
+          "git_blob_sha": "11b07396a79418f285553aaae62caa0c758e61f1",
+          "bytes": 13821
+        },
+        {
+          "path": "skills/video-shots/examples/demo-shots.json",
+          "upstream_path": "skills/video-shots/examples/demo-shots.json",
+          "git_blob_sha": "9cd1f1e032dbf5513f1b5dcf8e9a653889bc3716",
+          "bytes": 31686
+        },
+        {
+          "path": "skills/video-shots/examples/demo-track.json",
+          "upstream_path": "skills/video-shots/examples/demo-track.json",
+          "git_blob_sha": "4d1402661c409ba88d89be20cf3f6a3de7e616d6",
+          "bytes": 3926
+        },
+        {
+          "path": "skills/video-shots/references/analysis-pass.md",
+          "upstream_path": "skills/video-shots/references/analysis-pass.md",
+          "git_blob_sha": "2eb77af63c6f2da1d2b27970ece5ec5f1345b40d",
+          "bytes": 5624
+        },
+        {
+          "path": "skills/video-shots/references/report-style.md",
+          "upstream_path": "skills/video-shots/references/report-style.md",
+          "git_blob_sha": "a825fd94828ebcf8c2469abbe20e5dcd1aff554a",
+          "bytes": 5579
+        },
+        {
+          "path": "skills/video-shots/references/schema.md",
+          "upstream_path": "skills/video-shots/references/schema.md",
+          "git_blob_sha": "afc383d76e452c47d5ba54b810296108acaff1b6",
+          "bytes": 5372
+        },
+        {
+          "path": "skills/video-shots/references/taxonomy.md",
+          "upstream_path": "skills/video-shots/references/taxonomy.md",
+          "git_blob_sha": "7f06afe64de7fcc0b5939ee2d03146c5c223b1fc",
+          "bytes": 11939
+        },
+        {
+          "path": "skills/video-shots/scripts/report.css",
+          "upstream_path": "skills/video-shots/scripts/report.css",
+          "git_blob_sha": "0977da190ff3f3ede1caea5b559fd2b9fcc035eb",
+          "bytes": 33842
+        },
+        {
+          "path": "skills/video-shots/scripts/report.js",
+          "upstream_path": "skills/video-shots/scripts/report.js",
+          "git_blob_sha": "bd2d193ce94caf6e2f7ad75e9edb731610b6f19a",
+          "bytes": 20988
+        },
+        {
+          "path": "skills/video-shots/scripts/selftest.mjs",
+          "upstream_path": "skills/video-shots/scripts/selftest.mjs",
+          "git_blob_sha": "2532c332aee6124b40c19fac3384fd45d274619e",
+          "bytes": 36055
+        },
+        {
+          "path": "skills/video-shots/scripts/video-shots.mjs",
+          "upstream_path": "skills/video-shots/scripts/video-shots.mjs",
+          "git_blob_sha": "8c2372ea70af78ae8cebaf59bacf73914791e066",
+          "bytes": 77449
+        }
+      ],
+      "verification": {
+        "selftest_assertions_passed": 449,
+        "synthetic_video_seconds": 6,
+        "shots": 3,
+        "keyframes": 6,
+        "contact_sheets": 2,
+        "manual_cut_correction_applied": true,
+        "validation_passed": 14,
+        "validation_skipped": [
+          "cast: synthetic footage has no people"
+        ]
+      }
     }
   ]
 }

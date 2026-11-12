@@ -95,7 +95,11 @@ python "{baseDir}/scripts/resolve_bridge.py" --timeline-xml output/editable/reso
 
 dry-run只检查输入，绝不是已连接。真实桥接需要本机Resolve正在运行、对应版本/许可开放Python脚本，以及正确的本地模块/库路径。不要硬称所有版本都需要或都不需要Studio，按本机官方Developer/Scripting文档核实。API成功也需在UI验证画面、声音、字幕、链接和所选DRX结果。没有本机条件时照常交XML/SRT，不假装远程操作了用户Windows软件。
 
-## 5. 交给效果审核纠错
+## 5. 配音、音效与音乐
+
+需要新配音、拟音、环境声、背景音乐或电影配乐时，读取已安装的 audio-production-director 及 [音频交接](references/audio-production-handoff.md)。按最终输出时间线实际制作并混音，再生成新的合成 MP4 或带音轨的 XML；不能把写好声音提示词当成已制作完成。保留或替换原声要明确，避免双重口播。
+
+## 6. 交给效果审核纠错
 
 存在 `video-review-autofix` 时读取其入口；否则自行执行实际媒体检查。每个问题记时间点、证据、严重度和修复动作。修复主job/素材/字幕后输出新版本，最多2轮，保留原片与上一版本。不得凭静态报告宣布审美通过，不自动扩大删改剧情范围。切口、口型、字幕、素材主张和肤色必须看/听实际结果；无法听音频就明确该项未检查。
 

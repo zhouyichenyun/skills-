@@ -1,0 +1,6 @@
+interface:
+  display_name: "配音、音效与配乐制作"
+  short_description: "按剪辑需求生成声音并完成对齐、混音、人声避让和分轨交接"
+  default_prompt: "使用 $audio-production-director 为当前剪辑匹配配音、音效和音乐，完成真实生成、对齐、混音与审核。"
+policy:
+  allow_implicit_invocation: true

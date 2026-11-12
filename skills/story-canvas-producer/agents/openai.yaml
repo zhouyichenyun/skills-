@@ -1,0 +1,6 @@
+interface:
+  display_name: "角色场景与故事画布"
+  short_description: "角色多视图定妆、场景与连续性台账，有限轮次抽卡筛选和可视化分镜板"
+  default_prompt: "使用 $story-canvas-producer 管理角色、场景和连贯故事，实际生成并评审候选，在画布上呈现选定资产与镜头。"
+policy:
+  allow_implicit_invocation: true
