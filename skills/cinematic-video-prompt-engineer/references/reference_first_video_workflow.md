@@ -1,0 +1,330 @@
+# Reference-First Video Workflow
+
+Read this file only when the user requests reference images, supplies reference images, or the production-path router identifies a high-drift task where references materially improve control.
+
+## Purpose
+
+Separate static visual design from temporal video direction. A reference-first workflow should reduce ambiguity in the video prompt, not append image prompts to an already complete direct-video prompt.
+
+Use two distinct compiled outputs:
+
+- `无参考图直出版`: self-contained text-to-video prompt with the necessary static and dynamic information.
+- `参考图驱动版`: image-to-video prompt bound to actual selected images; static descriptions are minimized and temporal instructions carry the detail.
+
+Do not try to make one prompt optimal for both modes.
+
+## Stage 1: Reference Asset Plan
+
+For the selected adaptation scope, inventory before minimizing. When planning assets for a novel/screenplay, cover every principal character, main location and story-critical prop, plus necessary costume/injury variants. List a genuinely needed relationship/action state or opening frame as a later dependency, not an extra foundation image due now. Full-work scope covers the selected whole work, not only its opening clip; a selected excerpt covers only that excerpt. Do not infer full-work coverage from a highlight request or invent assets beyond the requested scope.
+
+In the existing asset plan, give each necessary entity/state a concise coverage status: usable existing asset (cite its identifier), new image prompt required, or covered by a named shared reference (state which one). Ordinary background people/objects need not become separate assets. Check planned scenes/shots back against this inventory: no principal identity, critical location/contact view or plot-bearing prop may disappear merely to meet a small reference-count estimate. Complete coverage does not mean uploading the entire asset library to each clip.
+
+Deliver a prompt for every required new asset in the requested stage, or explicitly mark the remaining items and delivery scope when batching is unavoidable; never label an opening batch as a complete asset package. Do not defer a missing required asset silently to video generation. A plan or image prompt is not a generated/inspected image: asset readiness and final image-grounded compilation still follow the existing evidence and approval rules. Reuse this coverage record rather than adding a second default table.
+
+Resolve the target aspect ratio before creating composition-controlling production assets. Follow an explicit ratio, inherit an approved first frame/previous clip, and preserve a confirmed series ratio. If ratio is unspecified and would materially change costly relationship, scene, first/tail-frame, group, full-body action, or large-scale assets, combine one aspect-ratio question with any existing direction/production-path checkpoint. For vertical production, read `vertical_9x16_adaptation.md`.
+
+First classify every supplied or planned image by source and authority:
+
+- `灵感参考图`: an external still, photograph, painting, mood board, or user-provided style example used to abstract one or a few declared dimensions such as composition method, color logic, material mood, or subject direction. It is not automatically authoritative for identity, exact blocking, scene topology, or story action. Do not copy a recognizable shot, cast arrangement, prop combination, or complete visual design.
+- `生产资产参考图`: an approved/generated character, wardrobe, location, prop, product, or vehicle asset intended to lock the named static facts across generation.
+- `状态/首帧参考图`: an approved image intended to lock the current pose, screen positions, contact, prop state, or opening composition for one clip. It does not control later movement, performance change, or camera development unless explicitly assigned.
+
+If the user's intent is ambiguous, treat external inspiration as inspiration rather than a production lock. A production image may serve several compatible fields only when they do not conflict, but still state its authority explicitly.
+
+All instructions below to generate, regenerate, repair, or add a reference mean execute only when actual media work is authorized and supported; otherwise provide the appropriate image prompt/repair recommendation and identify the unresolved asset dependency.
+
+Before writing image prompts, identify the visual facts that are expensive to let drift:
+
+- recurring principal identity and costume state
+- recurring or topology-critical location
+- relationship geometry that affects blocking, height, distance, or contact
+- exact product, vehicle, or story-critical prop structure
+- exact first frame only when the opening composition must be tightly controlled
+
+Choose the smallest asset set that solves those risks. Do not create one reference per named person, room, or object mechanically.
+
+- Give recurring principal characters individual identity references.
+- Keep one-off supporting characters inside a relationship/keyframe image or the video prompt unless their identity must recur.
+- Use a clean scene plate for recurring locations or spaces whose entrances, exits, depth, or action path matter.
+- Use a relationship/two-shot reference only when shared blocking or chemistry is generation-critical.
+- Use a prop/product reference only when its design, ownership, readable marking, or state carries the story.
+- 1-3 active references is a common planning estimate, not a universal cap. Required identity, topology, contact and planned-view coverage determines the smallest sufficient set. Reuse assets and omit redundant images; do not drop a necessary principal identity or unseen critical view merely to stay within three. Separate the reusable asset library from the current shot's inputs. If an actual tool input limit applies, plan compatible shot/asset batches without losing required coverage; follow the user's requested text-delivery scope rather than introducing a new approval round.
+
+Stage 1 output:
+
+```text
+【参考图素材规划】
+本阶段需要：...
+不单独生成：...（原因）
+
+【参考图提示词】
+参考图1｜类型与用途：...
+提示词：...
+```
+
+Follow `Execution Decisions and Agent Capabilities` and `Production Path Routing` in `../SKILL.md`. Stage 1 is complete when its requested foundation plan/prompts are delivered, not when dependent images or a reference-driven video are finished. Wait for missing/unreadable required images, foundation confirmation needed by combinations, or explicitly reserved approval. Already selected, readable images proceed to inspection without reapproval. Generation permission does not imply selection authority; follow the dependency section below. Without image-viewing capability, identify needed facts and provisional text work; never claim inspected pixels. Image prompts are intent, not evidence of results.
+
+For `9:16竖屏`, create composition-controlling assets—blocking scene plates, relationship/two-shots, first/tail frames, and ordered keyframes—in the target ratio. Identity or isolated prop references may use another practical ratio only when they are attribute references and crop-safe; any literal first/last frame must match 9:16, and first/last frames must match each other. Do not treat a side-cropped horizontal frame as a valid vertical keyframe until people, hands, props, exits, light source, and action path have been inspected and deliberately recomposed.
+
+### Foundation and combination-image dependencies
+
+Initially deliver the complete needed foundation set: individual character/current-costume prompts, unpeopled scene plates and story-critical prop prompts. Do not append relationship, first/tail-frame or action-keyframe prompts merely because reference-first was selected. The asset plan may list them as `基础资产确认后按需补充`; this is staged completeness, not a missing foundation asset. A one-off supporting role may remain a video-text role rather than forcing a separate identity image.
+
+Before drafting a required combination image, obtain readable actual foundations confirmed/selected by the user, or selected under explicit delegated authority. Approval of a text description, image prompt or production path is not approval of an actual image. Reuse already confirmed assets without asking again. Then bind each needed identity, costume, space or prop to its actual source identifier; preserve those designs rather than independently redescribing/recasting the people. Only include constituents the combination really depends on. If existing foundations already support the planned video, omit the extra combination image and proceed at the authorized stage.
+
+If the user explicitly requests all text before images exist, supply dependent prompts only as provisional, unresolved-asset drafts; do not label their characters or composition verified or ready for final reference-grounded production. Otherwise stop dependent work at the missing confirmation while finishing independent foundation deliverables.
+
+When a confirmed foundation changes, trace which existing combinations and compiled video bindings use the changed field. Mark only affected outputs as needing reconciliation; compare them with the revised actual asset, repair/regenerate incompatible combinations, and use the latest selected identifiers. Do not silently mix an old face/costume/layout/prop state with its replacement, or invalidate unrelated images automatically. Story-authorized timed state changes remain valid deltas, not accidental asset drift. This adds no media-generation authorization.
+
+## Reference Image Prompt Compiler
+
+Compile each image prompt in this order, omitting fields that do not serve that asset:
+
+1. image type and single production purpose
+2. only the stable anchors controlled by that image
+3. neutral baseline or one current visible state/action
+4. physically possible camera witness position, height, distance, and subject scale when composition matters
+5. visual center and decisive foreground/midground/background relationships when space or blocking matters
+6. one motivated primary light source and only necessary practical fill/reflection; tie color to real sources
+7. material behavior that affects continuity, such as layer, weight, wear, wetness, reflectivity, or contact
+8. a short scene-specific exclusion list
+
+Prefer specific nouns, physical relationships, and source-based light over generic labels such as `电影感`, `高级感`, `史诗感`, `大师级`, `8K`, or `高度细节`. The image should remain specific after generic quality words are removed. Default principal-character multi-view cards follow `character_card_prompts.md` and are the scoped exception to one-frame composition. Other assets use one standalone frame unless the user requests a sheet/storyboard; do not combine several asset types on one canvas. The card's portrait layout does not impose that ratio on other assets or the video. Do not impose English-only image prompts.
+
+Use type-specific information budgets as selection gates rather than one template for every image. The listed fields are maxima and candidate categories, not a requirement to fill every slot. Keep the exclusion list to the few likely failures for that asset—normally 3-6 failure classes—and remove generic negatives that do not protect production use.
+
+- `人物角色卡/定妆图`: principal/recurring characters use `character_card_prompts.md` directly, without a mandatory preceding single portrait. A simpler single image remains appropriate for supporting/face-only tasks or explicit requests. Keep useful identity/costume anchors and a neutral baseline; no second identity, story interaction or elaborate narrative background. If costume construction matters, describe visible layers, fasteners, material, fit and current state, removing non-recurring decoration. A same-identity multi-view card is one foundation asset, not a relationship/scene combination; confirm its actual design before dependent images.
+- `纯场景图`: select the necessary topology/light anchors and story-relevant environmental traces under `Scene photography and lighting execution` below. Clarify entrances, exits, depth, action path and obstacles; use `无人物` for a clean plate. Do not clutter the room with objects that do not affect later blocking or story.
+- `双人关系图`: lock one relationship axis, screen-left/right positions, height/distance, eye lines, and one contact or no-contact state. Choose one visual center and one composition decision produced by the relationship pressure; do not turn it into two independent fashion portraits.
+- `首帧/关键帧图`: use one main action state, one secondary story clue, one principal composition decision, one motivated primary light source, and 2-3 decisive environment facts. A keyframe may imply what just happened and what may happen next, but should not try to depict several time beats at once.
+- `关键道具/产品图`: lock identity, scale, material, orientation, readable marking when essential, wear/state, owner or placement when relevant, and one clear viewing angle. Do not add a decorative story scene unless context is required to judge scale or use.
+
+For relationship and keyframe composition, decide internally:
+
+- who looks at whom and who knows more
+- which person, object, boundary, or empty space carries the pressure
+- where the viewer is physically placed
+- where the eye enters, what slows or occludes it, and where it lands
+
+Use these questions to choose camera position and layering; do not print the analysis unless it helps the user review the asset plan.
+
+### Scene photography and lighting execution
+
+For scene assets, combine spatial usability with the existing `Visual Style Integration` and `Lighting Detail Budget` in `style_patterns.md`; read those complete sections when drafting. Write only useful choices in a compact paragraph, not a camera/lighting parameter table.
+
+- Choose a feasible main viewpoint, framing and foreground/midground/background relation that reveals depth and a content-matched visual center. Show necessary entrances, furniture relations and action clearance; do not default to a featureless wide room inventory, gratuitous extreme wide-angle distortion or blur that conceals topology. A scene plate's viewpoint is not a command to lock the video's later shots.
+- Describe the motivated source's location in the space, direction and effect on useful surfaces/areas, with enough shadow separation and material detail. Use fill/bounce or additional practical sources only when plausible and helpful. Decide the light/dark hierarchy and source/material-related color for this scene; do not impose low-key contrast, cool/warm opposition, beams, grain or shallow depth as a universal cinematic recipe. Preserve an explicit plain/documentary treatment.
+- When later blocking is known, keep the principal standing/seated/contact area and route plausibly lit for the intended evidence, or specify a story-motivated silhouette/concealment. An empty plate plans available illumination; it does not verify future facial exposure or contact visibility. Recheck those with actual actor placement in a dependent image or video. Do not add people, new plot actions or premature first-frame images to demonstrate lighting.
+
+When changing viewpoint, preserve world-space source positions, time/weather and confirmed treatment, not a fixed screen-left/right light label. For actual approved plates, inherit observed facts and flag a materially unusable area for repair rather than silently relighting it in conflicting video text. This is not a requirement to generate multiple scene angles or a scene grid.
+
+### Scene multi-view prevention
+
+Use when the same location needs materially different views or spatially sensitive blocking. Ordinary single-view scenes keep the existing scene-plate workflow. This is pre-generation planning; existing approval and media-authorization boundaries still apply. For ordinary angle changes, start with the main image plus explicit camera/view relationships. Add a simple plan when entrances, routes or horizontal connections matter; add an oblique high-angle scene view when height, volume or occlusion matters. Neither is universally more reliable or mandatory; inspect either auxiliary image for conflicts before use.
+
+1. Start from a selected actual main scene image. Match only useful fixed landmarks between that image and an optional layout sketch: entrances, stairs, passage, furniture ends, relevant wall/column, key prop and practical light. Use the same short identifiers in both; an annotated planning copy may help, while final scene images stay clean. Record relationships such as `台灯固定在柜台靠楼梯的一端，墙柱紧邻该端` rather than a disconnected object list. Mark structures that affect occlusion or movement; do not inventory every decoration.
+2. Treat a single-image-derived plan as a layout proposal. Preserve observed relationships; distinguish unseen boundaries/areas as inferred, without fabricated exact dimensions. Unseen areas may be designed to serve the story: extend walls, furniture backs or connected spaces without contradicting observed structure, occupying established routes or moving known objects. Settle story-critical inferred topology before dependent views, reusing existing confirmations rather than asking about every background detail. Once selected, record these additions in the shared layout/scene description and reuse them across later angles. A top-down sketch controls horizontal layout; add only needed height/volume notes for stairs, columns, counters and occlusion. Do not mistake a decorative bird's-eye rendering for verified geometry.
+3. Select camera positions and directions from shot needs, with feasible height and distance. State the physical standing position, viewing direction and near/middle/far layers; identify visible changes that distinguish this viewpoint from a crop of the main image. Before each angle, resolve which landmarks are visible, their near/far and occlusion relations, and which are behind the camera or outside the frame. Write a definite visibility choice for a position-sensitive landmark; do not offer contradictory alternatives such as `边缘或画外` in the final prompt. An offscreen lamp can still illuminate the room; it need not be moved into every shot. If the evidence cannot resolve a story-critical relation, settle the layout proposal or obtain supporting evidence before asserting it.
+4. Bind the main image to appearance/material/color and observed light sources; bind the confirmed layout to positions and the current camera marker to view direction. Reconcile conflicts before generation. Express the resulting view in a compact prompt: `同一空间与参考分工 → 机位/朝向 → 可见物件与遮挡 → 关键画外物件 → 原位置光源影响 → 最少必要补全`. Preserve world-space positions as screen positions change. Allow story-needed unseen detail consistent with the established space; do not promise exact reconstruction.
+5. Derive each needed view from the same confirmed main/layout sources. Use an additional selected angle only for its declared compatible evidence, not as an unchecked chain of generated replacements. There is no fixed angle count or mandatory grid. If a preview sheet is requested, match cell IDs to camera positions/directions; selected cells need clean standalone outputs, and regenerated high-resolution versions still need inspection. Reuse an already suitable main view rather than regenerating it for a quota.
+
+Inspect outputs under Stage 2 before selection: prioritize major topology, usable routes, story-critical placement and interaction/occlusion. Check that perspective, visible surfaces and occlusion actually change with the requested camera move, not merely the crop. Distinguish compatible completion of unseen areas from contradictions of known space; novelty alone is not a defect. Harmless background differences may be accepted within the user's tolerance; an ordinary object becomes critical when an action, concealment, light cue or continuous shot depends on it. This planning reduces ambiguity but does not establish exact 3D consistency, actor visibility or rendered-video continuity. Do not forward planning labels/arrows/grids as production content or automatically turn scene views into first frames.
+
+### Optional camera trajectory annotation
+
+For a complex camera route, an annotated copy of a selected scene image may supplement the clean source. Bind it only to the camera path: distinguish camera travel from actor/object travel, identify start/end, viewing direction and necessary bypass side. A projected 2D line does not establish height, depth or collision clearance; supply only the missing spatial relationships in text and reconcile conflicts with the selected scene. Arrows, labels and colored lines are planning marks, never production content. Do not force a trajectory image, a fixed reference count or a keyframe for every phase; identity images and spatial references are not automatically a sequence of temporal keyframes. For continuous travel between views, use `复杂连续运镜的连接控制（按需）` in `camera_movement_prompt_library.md`.
+
+## Stage 2: Inspect and Bind Actual Images
+
+Compile the video prompt from the images that will actually be used, not only from their original image prompts. If images are available, inspect visible identity, costume state, layout, screen position, prop state, light direction, and any accidental discrepancy that may affect motion.
+
+### Actual-Reference Supremacy Gate
+
+Before binding, make a compact internal inventory for each selected image:
+
+- `visibly confirmed`: facts the pixels clearly support
+- `absent or unclear`: planned facts that cannot be verified in the image
+- `conflicting`: visible facts that disagree with another active reference or the intended action
+- `contaminated`: watermark/logo, garbled text, malformed anatomy, accidental extra object/person, damaging crop, or another artifact likely to propagate into video
+
+The actual selected image is authoritative for its visible state. Its original image prompt records design intent but is not evidence that the result contains every requested fact. Do not name, lock, move, or transfer an absent/unclear prop merely because it appeared in the earlier prompt. If an absent detail is essential to the opening action, repair/regenerate the frame or bind a compatible dedicated reference first. If it can enter later, give it a visible source, entrance/contact action, and final state instead of making it appear.
+
+Do not send a contaminated production reference forward without warning. A negative clause such as `不要水印` is not a reliable way to remove a watermark or malformed detail already embedded in the input. Recommend cleaning, cropping, repairing, or regenerating the asset when the flaw is likely to persist or animate.
+
+### Visible cross-space state and critical group counts
+
+Activate when a window, doorway, glass surface or reflection reveals a space before the camera enters it, or when a story-critical group count repeatedly fails in generated results. Reuse the foundation/combination dependencies above; this does not make populated images a default asset or authorize generation.
+
+- A clean scene plate establishes the environment, not proof of story-time occupancy. If the opening already shows an occupied room, do not bind its empty plate as the literal opening state. Specify the occupants as present from their first visible appearance; if active images visibly conflict on occupancy, reconcile their state/authority before compilation rather than relying on repeated text to override an empty literal frame.
+- Trace only relevant visible state across the connected views: occupants and seats, ongoing activity, key props and practical lights. Distant or partly occluded people need not have readable faces, but must not appear from an empty room without a story-supported entrance. Temporary loss of visibility does not reset their state. Preserve fixed window/wall/cabinet relationships during a reveal; allow compatible unseen detail, not replacement of established structure.
+- If explicit role/count wording still repeatedly loses a necessary person, recommend a populated relationship/state keyframe with individually distinguishable occupied positions. Separate resident participants from a later visitor (for example, four seated players plus one standing courier); the visitor must not replace a participant. Inspect actual occupancy and occlusion rather than counting chairs. Bind this image to the relevant interior beat, not automatically to the video's first frame. Reconcile any exterior reference that already exposes the same occupants. This is an escalation option, not a requirement for every group scene, a forced separate portrait per extra, or a guarantee of generated counts.
+- Preserve approved light/dark hierarchy while making required evidence readable: do not brighten the entire room or force all faces visible merely to prove occupancy. Apply existing lighting and local-repair rules.
+
+Case check: in a motorcycle arrival followed by an upstairs mahjong exchange, the four players are already seated when first seen through the upstairs window; entering the room reveals the same four, and the courier is the fifth person. A later window exit preserves the revealed wall/window geometry. Acceptable distant occlusion differs from an actually empty table. This case records reported failures; populated-reference repair remains unverified until a new video demonstrates it. Keep a successful camera route locked while repairing these states.
+
+### Reference-to-Motion Physical Feasibility Audit
+
+Before writing the timeline, reconstruct the visible starting geometry and test the intended motion:
+
+- current hand/foot placement, body support, facing direction, and balance
+- reach distance and unobstructed path to the target
+- chair arms, table edges, doors, clothing layers, and other clearance limits
+- which surface or body part supplies force; grip, pressure, weight, friction, resistance, and release
+- prop orientation, support point, ownership, and final resting place
+- room to stand, turn, cross, or exit without intersecting furniture or another person
+- whether the chosen shot size can actually show the important contact and its consequence
+
+Write contact as `approach -> contact -> pressure/weight response -> release or transfer -> visible endpoint`. Replace brittle numeric precision such as `停在2厘米处` with a visually judgeable event such as `指尖将触未触时停住`, unless measurement itself matters to the story. If the selected frame cannot support the motion, change the blocking, repair the keyframe, add a compatible view, or split the action; do not ask the model to solve impossible geometry.
+
+Assign each reference one narrow authority:
+
+```text
+参考图1：锁定女主身份、面容、发髻与当前服装状态。
+参考图2：锁定厅堂空间布局、门窗方位与烛光方向。
+参考图3：锁定两人初始左右站位、距离与视线关系。
+```
+
+This mapping is required when several references could compete. Do not ask two references to control the same fact differently. If they conflict, choose the authoritative image for that fact, repair/regenerate the conflicting asset, or explicitly describe the intended on-screen change.
+
+## Reference Image Result Repair
+
+Use this when the user likes most of a generated reference image and asks to correct a limited failure. Inspect the actual result when available; do not diagnose only from the original prompt.
+
+1. Name at most 1-3 dominant failed fields.
+2. List the approved visual facts under `保持不变`.
+3. Put the requested correction under `只修改`.
+4. Include only unavoidable physical dependents of that correction, such as sleeve fold after changing a cuff, shadow/contact after moving a hand, or reflections after changing a prop material.
+5. Put likely collateral drift under `禁止连带变化`.
+
+Repair shape:
+
+```text
+【保持不变】
+人物身份、已确认服装主体、构图、摄影机位置、背景与光源保持不变。
+
+【只修改】
+将右侧袖口改为窄口交领袍结构；同步修正与袖口直接相连的布料褶皱和手腕遮挡关系。
+
+【禁止连带变化】
+不得改变脸型、年龄感、发髻、服装颜色、身体比例、机位、场景布局和光线方向。
+```
+
+If the failed field is foundational—wrong person, wrong era, unusable topology, or a composition that cannot support the intended video—recommend regenerating that asset instead of accumulating contradictory repair clauses. Do not claim repair success until the revised image has been generated and inspected.
+
+## Static Information Deduplication
+
+In a `参考图驱动版` video prompt:
+
+Keep only:
+
+- reference identifier and authority mapping
+- role/identity binding needed to tell people apart
+- initial screen position, contact, or prop ownership when motion depends on it
+- temporary state not reliably visible or easy to misread
+- explicit changes that must occur during the clip
+
+Do not restate:
+
+- full facial and body descriptions
+- full costume inventories
+- full room, architecture, material, palette, or lighting descriptions
+- alternate adjectives or synonyms that may pull the render away from the image
+- a new initial pose or composition that contradicts a first-frame reference
+
+Minimal binding is not redundant description. It tells the model which image controls which fact.
+
+## Dynamic-Difference Contract
+
+The images control assigned static visible facts. The video text controls time:
+
+- duration and beat order
+- body action, biomechanics, object contact, and recovery
+- gaze, breath, voice, micro-expression, and emotional transition
+- camera path, focus change, cuts, and transitions
+- dialogue order, speaker identity, lip-sync, overlap, and pauses
+- environmental motion and diegetic sound
+- final visible state
+
+When a static fact must change, write it as a timed delta with cause and endpoint:
+
+```text
+12秒时，她转身过急，参考图1中的红色外袍从右肩滑落，露出里面原本穿着的白色丧服；外袍最终挂在左肘，不恢复原位。
+```
+
+Avoid bare contradictions such as describing the character as wearing white at the start while the identity reference shows a red outer robe.
+
+## First-Frame and Camera-Development Contract
+
+Before applying this section, distinguish a previous tail-frame state reference from an explicitly bound opening frame. A supplied previous ending does not automatically authorize matching its composition. Follow `continuity_director_contract.md` for cross-clip cuts and shot-to-reference coverage. Only a user-selected actual first-frame binding uses the opening-composition contract below.
+
+A `状态/首帧参考图` controls the opening state, not the whole film grammar. Unless the user explicitly requests `固定镜头`, `一镜到底`, or the model/workflow requires a locked view, its shot size, angle, framing, and focus authority ends after the opening beat is established. Identity, costume state, scene topology, relationship axis, light direction, handedness, and prop continuity remain locked across later views.
+
+Choose the structure from the dramatic content before writing the timeline:
+
+- Use a one-take only when continuous space, uninterrupted performance, or real-time tension is the dramatic advantage. Let the camera develop inside the take through one coherent path, motivated reframing, or focus change; do not keep the first-frame composition static by habit.
+- Use a multi-shot sequence when the story needs distinct evidence, object contact, a listener reaction, a power shift, or an aftermath that one view cannot read clearly. When the image is explicitly bound as the first frame, begin there; otherwise use it as state evidence and open on the planned new angle. Cut only to views supported by the same identity and inspected spatial references.
+- Build a motivated shot progression rather than equal time slices. A common relationship-drama progression is `relationship geography -> decisive hand/object action -> affected face/reaction -> release or aftermath`, but omit or reorder stages to fit the actual story.
+- Each new shot must change what the audience knows, feels, or can physically verify. Vary shot size, horizontal angle, focus, or camera distance enough to create a real edit; preserve the 180-degree axis, eyelines, screen direction, light, body/prop state, and match-on-action continuity.
+- If a required new view depends on unseen room geometry, an unverified reverse side, or a face/prop angle the active references cannot hold reliably, generate a compatible additional keyframe/scene view or split the clip instead of inventing uncontrolled space.
+
+Reference stability and cinematic coverage are separate goals: references keep the world consistent; the shot design tells the story.
+
+## Reference-Driven Prompt Shape
+
+```text
+【参考图绑定】
+参考图1锁定...；参考图2锁定...。未明确改变的静态信息保持不变。
+
+【生成优先级】
+先保证...，其次...；弱化不必要的装饰性变化。
+
+【动态视频提示词】
+片长与结构：...（明确一镜到底或多镜头；首帧只锁开场还是按用户要求锁全片）
+0-...秒：动作、表演、镜头、声音...
+...秒：明确变化与因果...
+结尾状态：...
+```
+
+Do not force every label when a compact paragraph is clearer. The essential invariant is `binding + temporal direction + explicit deltas`, not a fixed template.
+
+## Direct-Video Prompt Shape
+
+When the user skips references, restore the static anchors needed for independent use:
+
+- who and where
+- identity/costume distinctions that prevent character confusion
+- usable scene geography
+- key prop ownership and start state
+- motivated light baseline and sound bed
+- first-frame reconstruction, temporal action, performance, camera, and ending
+
+Do not refer to nonexistent images. If the user wants both versions, compile this separately from the reference-driven version.
+
+## Continuation and Multiple Scenes
+
+- Reuse approved assets across clips. Create or update a reference only when identity, costume/injury/weather state, location, or a story-critical prop visibly changes.
+- For several locations, do not front-load every scene prompt. Prepare the current clip's active assets first; maintain the rest as a concise asset plan.
+- For several principal characters, keep identity references separate when stable faces matter, but activate only the references supported by the current generation tool and shot.
+- If the next clip changes a visible fact, preserve the previous final state and generate an updated-state reference only when that state will recur or is difficult to hold through text alone.
+
+## Final Conflict Check
+
+For scene-image prompts, check the chosen viewpoint/depth, motivated source and tonal/material treatment against the intended action area, entrances and paths. Use only relevant checks; spatial readability is not a demand for flat all-over light, and an empty scene does not prove actor lighting. Fix conflicts before delivery without adding decorative camera/light fields.
+
+Before delivery, verify:
+
+- every supplied image is classified as inspiration, production asset, or state/first-frame control
+- every active reference has one stated purpose
+- each image prompt follows its type-specific information budget and asks for one frame/composition unless the user requested a sheet or storyboard
+- no static fact has two conflicting authorities
+- the final prompt uses only facts visibly confirmed in the selected images; absent/unclear planned details are repaired, separately bound, visibly introduced, or omitted
+- the selected images are checked for watermarks/logos, garbled text, malformed anatomy, accidental objects/people, harmful crops, and other contaminants before production use
+- the video prompt does not redescribe static appearance in competing language
+- every intended change from a reference has time, cause, and final state
+- every key action is reachable and mechanically credible from the visible starting pose, furniture, clearance, prop support, weight, and friction
+- a first-frame image locks only the opening unless a locked shot or one-take was explicitly chosen; later shot sizes, angles, focus, cuts, and camera movement follow the dramatic structure
+- each cut or camera move has a story function and preserves axis, eyeline, screen direction, light, identity, and prop/body continuity
+- the chosen ratio is explicit, inherited, or safely defaulted; a costly composition-sensitive reference stage did not proceed with an unresolved ratio
+- for vertical output, composition-controlling references use the target ratio and the narrow frame preserves faces, hands, props, entry/exit paths, full-body clearance, and the intended relationship blocking
+- character identity, scene geography, prop ownership, light direction, and starting contact are sufficient to interpret the motion
+- the prompt is clearly labeled as reference-driven or no-reference when both are supplied
